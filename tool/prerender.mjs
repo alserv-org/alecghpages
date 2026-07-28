@@ -68,11 +68,15 @@ const render = ({ path, title, description }) =>
     )
     .replace(
       /(<link\s+rel="canonical"\s+href=")[^"]*(")/,
-      `$1${SITE}/${path}$2`,
+      // Trailing slash: Pages 301s /listkeeper to /listkeeper/, so the
+      // canonical has to name the URL that actually answers 200.
+      `$1${SITE}/${path}/$2`,
     )
     .replace(
       /(<meta\s+property="og:url"\s+content=")[^"]*(")/,
-      `$1${SITE}/${path}$2`,
+      // Trailing slash: Pages 301s /listkeeper to /listkeeper/, so the
+      // canonical has to name the URL that actually answers 200.
+      `$1${SITE}/${path}/$2`,
     );
 
 for (const route of routes) {
