@@ -1,186 +1,189 @@
 .navbar {
-  background-color: var(--color-surface);
-  border-bottom: 1px solid var(--color-divider);
   position: sticky;
   top: 0;
   z-index: 100;
-  backdrop-filter: blur(10px);
-  background-color: rgba(26, 23, 21, 0.95);
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.25s var(--ease), background-color 0.25s var(--ease);
 }
 
-.nav-container {
-  max-width: 1200px;
+/* Glass only once scrolled — at rest the nav floats over the aurora. */
+.navbar-scrolled {
+  border-bottom-color: var(--line);
+  background: color-mix(in srgb, var(--bg) 78%, transparent);
+  backdrop-filter: blur(14px) saturate(1.4);
+  -webkit-backdrop-filter: blur(14px) saturate(1.4);
+}
+
+.nav-inner {
+  max-width: var(--maxw);
   margin: 0 auto;
-  padding: 1rem 2rem;
+  min-height: var(--nav-h);
+  padding: 0 1.5rem;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  gap: 1rem;
 }
 
-.nav-right {
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-}
+/* ── Logo ──────────────────────────────────────────────────────────────── */
 
 .nav-logo {
-  font-size: 1.5rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  color: var(--text);
+  font-weight: 650;
+  letter-spacing: -0.01em;
+  margin-right: auto;
+}
+
+.logo-mark {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, var(--brand-1), var(--brand-2));
+  color: #fff;
+  font-size: 0.82rem;
   font-weight: 700;
-  color: var(--color-accent);
-  text-decoration: none;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.02em;
+  box-shadow: 0 4px 14px var(--brand-glow);
+  flex-shrink: 0;
 }
 
-.logo-text {
-  transition: color 0.2s ease;
+.logo-word {
+  font-size: 0.98rem;
 }
 
-.logo-text:hover {
-  color: var(--color-accent-hover);
-}
+/* ── Links ─────────────────────────────────────────────────────────────── */
 
-.nav-menu {
+.nav-links {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
-  list-style: none;
-}
-
-.nav-item {
-  position: relative;
+  gap: 0.15rem;
 }
 
 .nav-link {
-  display: inline-block;
-  padding: 0.5rem 1.25rem;
-  color: var(--color-text-secondary);
-  text-decoration: none;
-  transition: color 0.2s ease;
-  border-radius: 6px;
-  font-weight: 500;
   position: relative;
-}
-
-.nav-link::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%) scaleX(0);
-  width: 80%;
-  height: 2px;
-  background-color: var(--color-accent);
-  transition: transform 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.85rem;
+  border-radius: 9px;
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  white-space: nowrap;
+  transition: color 0.18s var(--ease), background-color 0.18s var(--ease);
 }
 
 .nav-link:hover {
-  color: var(--color-accent);
+  color: var(--text);
+  background: var(--surface-hover);
 }
 
-.nav-link:hover::after {
-  transform: translateX(-50%) scaleX(1);
+.nav-link.active {
+  color: var(--text);
 }
 
-.github-link {
-  color: var(--color-text-secondary);
-  transition: color 0.2s ease, transform 0.2s ease;
+/* Underline sits under the active route only. */
+.nav-link.active::after {
+  content: '';
+  position: absolute;
+  left: 0.85rem;
+  right: 0.85rem;
+  bottom: 0.18rem;
+  height: 2px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, var(--brand-1), var(--brand-2));
+}
+
+/* ── Actions ───────────────────────────────────────────────────────────── */
+
+.nav-actions {
   display: flex;
   align-items: center;
-  padding: 0.5rem;
-  border-radius: 6px;
+  gap: 0.35rem;
 }
 
-.github-link:hover {
-  color: var(--color-accent);
-  transform: scale(1.1);
-}
-
-.language-toggle {
-  display: flex;
+.icon-btn {
+  display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
-  padding: 0.5rem 1rem;
-  background: none;
-  border: 1px solid var(--color-divider);
-  border-radius: 6px;
-  color: var(--color-text-secondary);
-  cursor: pointer;
-  transition: all 0.2s ease;
-  font-size: 0.875rem;
-  font-weight: 500;
+  justify-content: center;
+  gap: 0.35rem;
+  height: 36px;
+  min-width: 36px;
+  padding: 0 0.55rem;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  color: var(--text-muted);
+  transition: color 0.18s var(--ease), background-color 0.18s var(--ease),
+    border-color 0.18s var(--ease);
 }
 
-.language-toggle:hover {
-  color: var(--color-accent);
-  border-color: var(--color-accent);
+.icon-btn:hover {
+  color: var(--text);
+  background: var(--surface-hover);
+  border-color: var(--line);
 }
 
-.language-code {
-  font-size: 0.75rem;
-  letter-spacing: 0.05em;
+.lang-btn span {
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
 }
 
-.language-link {
-  background: none;
-  border: none;
-  cursor: pointer;
-  text-align: left;
-  width: 100%;
-}
+/* ── Mobile ────────────────────────────────────────────────────────────── */
 
-.nav-toggle {
+.mobile-only {
   display: none;
-  background: none;
-  border: none;
-  cursor: pointer;
-  color: var(--color-text);
-  padding: 0.5rem;
 }
 
-/* Mobile Navigation */
-@media (max-width: 768px) {
-  .nav-container {
-    padding: 1rem;
-  }
+.mobile-sheet {
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0.15rem;
+  padding: 0.5rem 1rem 1.1rem;
+  border-top: 1px solid var(--line);
+  background: var(--bg-elevated);
+  animation: sheet-in 0.22s var(--ease);
+}
 
-  .nav-right {
+.mobile-sheet .nav-link {
+  padding: 0.75rem 0.9rem;
+  font-size: 1rem;
+}
+
+.mobile-sheet .nav-link.active::after {
+  display: none;
+}
+
+.mobile-sheet .nav-link.active {
+  background: var(--surface-hover);
+  color: var(--brand-2);
+}
+
+@keyframes sheet-in {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+}
+
+@media (max-width: 860px) {
+  .desktop-only {
     display: none;
   }
 
-  .nav-toggle {
-    display: block;
+  .mobile-only {
+    display: inline-flex;
   }
 
-  .mobile-nav {
-    display: flex;
-    flex-direction: column;
-    background-color: var(--color-surface);
-    border-top: 1px solid var(--color-divider);
-    gap: 0;
+  .nav-inner {
+    padding: 0 1.15rem;
   }
 
-  .mobile-nav .nav-item {
-    width: 100%;
-    border-bottom: 1px solid var(--color-divider);
-  }
-
-  .mobile-nav .nav-item:last-child {
-    border-bottom: none;
-  }
-
-  .mobile-nav .nav-link {
-    padding: 1rem 1.5rem;
-    display: block;
-    width: 100%;
-  }
-
-  .mobile-nav .nav-link::after {
+  .logo-word {
     display: none;
-  }
-
-  .mobile-nav .nav-link {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
   }
 }

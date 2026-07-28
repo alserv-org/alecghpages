@@ -1,104 +1,106 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { Menu, X, Github, Globe } from 'lucide-react';
+import React, { useEffect, useState } from 'react';
+import { Link, NavLink, useLocation } from 'react-router-dom';
+import { Menu, X, Github, Globe, Sun, Moon } from 'lucide-react';
 import { useTranslation } from '../contexts/LanguageContext';
+import { useTheme } from '../contexts/ThemeContext';
+import { projects } from '../data/projects';
+import { GITHUB_URL } from '../data/site';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const { language, setLanguage, t } = useTranslation();
+  const { theme, toggleTheme } = useTheme();
+  const location = useLocation();
 
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 8);
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
 
-  const toggleLanguage = () => {
-    setLanguage(language === 'en' ? 'fr-CA' : 'en');
-  };
+  // A route change should never leave the mobile sheet hanging open.
+  useEffect(() => setIsMenuOpen(false), [location.pathname]);
+
+  const toggleLanguage = () => setLanguage(language === 'en' ? 'fr-CA' : 'en');
+
+  const links = (
+    <>
+      <li>
+        <NavLink to="/" end className="nav-link">
+          {t('nav.home')}
+        </NavLink>
+      </li>
+      {projects.map((p) => (
+        <li key={p.id}>
+          <NavLink to={`/${p.slug}`} className="nav-link">
+            {p.title}
+          </NavLink>
+        </li>
+      ))}
+    </>
+  );
 
   return (
-    <nav className="navbar">
-      <div className="nav-container">
-        <Link to="/" className="nav-logo">
-          <span className="logo-text">AC</span>
+    <nav className={`navbar${scrolled ? ' navbar-scrolled' : ''}`}>
+      <div className="nav-inner">
+        <Link to="/" className="nav-logo" aria-label="Alec Chamberland — home">
+          <span className="logo-mark">AC</span>
+          <span className="logo-word">Alec Chamberland</span>
         </Link>
 
-        {/* Desktop Navigation */}
-        <div className="nav-right">
-          <ul className="nav-menu desktop-nav">
-            <li className="nav-item">
-              <Link to="/" className="nav-link">{t('nav.home')}</Link>
-            </li>
-            <li className="nav-item">
-              <Link to="/listkeeper" className="nav-link">{t('nav.listkeeper')}</Link>
-            </li>
-            <li className="nav-item">
-              <Link to="/pixelfarm" className="nav-link">{t('nav.pixelfarm')}</Link>
-            </li>
-          </ul>
+        <ul className="nav-links desktop-only">{links}</ul>
+
+        <div className="nav-actions">
+          <button
+            onClick={toggleTheme}
+            className="icon-btn"
+            aria-label={t('nav.toggleTheme')}
+            title={t('nav.toggleTheme')}
+          >
+            {theme === 'dark' ? <Sun size={18} /> : <Moon size={18} />}
+          </button>
           <button
             onClick={toggleLanguage}
-            className="language-toggle desktop-language"
-            aria-label="Toggle language"
+            className="icon-btn lang-btn"
+            aria-label={t('nav.toggleLanguage')}
             title={language === 'en' ? 'Français' : 'English'}
           >
-            <Globe size={20} />
-            <span className="language-code">{language === 'en' ? 'FR' : 'EN'}</span>
+            <Globe size={18} />
+            <span>{language === 'en' ? 'FR' : 'EN'}</span>
           </button>
           <a
-            href="https://github.com/alecc08"
+            href={GITHUB_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="github-link desktop-github"
-            aria-label="GitHub Profile"
+            className="icon-btn desktop-only"
+            aria-label="GitHub"
           >
-            <Github size={20} />
+            <Github size={18} />
           </a>
+          <button
+            className="icon-btn mobile-only"
+            onClick={() => setIsMenuOpen((o) => !o)}
+            aria-label={t('nav.toggleMenu')}
+            aria-expanded={isMenuOpen}
+          >
+            {isMenuOpen ? <X size={20} /> : <Menu size={20} />}
+          </button>
         </div>
-
-        {/* Mobile Menu Button */}
-        <button
-          className="nav-toggle"
-          onClick={toggleMenu}
-          aria-label="Toggle navigation"
-        >
-          {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
       </div>
 
-      {/* Mobile Navigation */}
       {isMenuOpen && (
-        <ul className="nav-menu mobile-nav">
-          <li className="nav-item">
-            <Link to="/" className="nav-link" onClick={toggleMenu}>{t('nav.home')}</Link>
-          </li>
-          <li className="nav-item">
-            <Link to="/listkeeper" className="nav-link" onClick={toggleMenu}>{t('nav.listkeeper')}</Link>
-          </li>
-          <li className="nav-item">
-            <Link to="/pixelfarm" className="nav-link" onClick={toggleMenu}>{t('nav.pixelfarm')}</Link>
-          </li>
-          <li className="nav-item">
-            <button
-              onClick={() => {
-                toggleLanguage();
-                toggleMenu();
-              }}
-              className="nav-link language-link"
-            >
-              <Globe size={20} />
-              <span>{language === 'en' ? 'Français' : 'English'}</span>
-            </button>
-          </li>
-          <li className="nav-item">
+        <ul className="nav-links mobile-sheet">
+          {links}
+          <li>
             <a
-              href="https://github.com/alecc08"
+              href={GITHUB_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="nav-link"
-              onClick={toggleMenu}
             >
-              <Github size={20} />
-              <span>{t('nav.github')}</span>
+              <Github size={17} /> {t('nav.github')}
             </a>
           </li>
         </ul>

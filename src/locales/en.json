@@ -1,53 +1,73 @@
 {
   "nav": {
     "home": "Home",
-    "listkeeper": "ListKeeper",
-    "pixelfarm": "Pixel Farm",
-    "github": "GitHub"
+    "github": "GitHub",
+    "toggleTheme": "Toggle theme",
+    "toggleLanguage": "Toggle language",
+    "toggleMenu": "Toggle menu"
   },
   "home": {
-    "passionStatement": "Driven by a passion for technology and the art of coding, I create applications that blend functionality with thoughtful design.",
-    "featuredProjects": "Featured Projects",
-    "listkeeperDescription": "A beautifully simple list app that focuses on what matters",
-    "listkeeperTag": "Flutter • Android",
-    "pixelfarmDescription": "Roguelike farming adventure with charming pixel art",
-    "pixelfarmTag": "Godot • In Development"
+    "role": "Independent developer",
+    "greeting": "Hi, I'm",
+    "statement": "I build small, focused apps and games for Android — the kind that do one thing properly and stay out of your way. Everything here is designed, written and shipped solo.",
+    "seeProjects": "See projects",
+    "projects": "Projects",
+    "shipped": "in the works"
+  },
+  "status": {
+    "live": "On Google Play",
+    "soon": "Coming soon",
+    "dev": "In development"
+  },
+  "project": {
+    "about": "About",
+    "features": "Highlights",
+    "details": "Details",
+    "platform": "Platform",
+    "engine": "Built with",
+    "status": "Status",
+    "back": "All projects",
+    "privacyPolicy": "Privacy policy",
+    "getItOnGooglePlay": "Get it on Google Play"
   },
   "listkeeper": {
-    "subtitle": "Simple lists. Done right.",
-    "about": "About",
-    "description": "In a world of bloated productivity apps that try to do everything, ListKeeper takes a different approach. It's a beautifully simple list management app that does one thing exceptionally well: helping you organize your thoughts and tasks without the noise. No complex features you'll never use, no overwhelming interfaces—just elegant, focused list-making that stays out of your way.",
-    "highlights": "Highlights",
-    "highlightsList": [
-      "Clean, intuitive interface",
+    "tagline": "Simple lists, done right.",
+    "description": "Most list apps grow until they need a tutorial. ListKeeper goes the other way: a fast, clean place to keep your lists, with nothing bolted on that you'll never open. Make a list, check things off, get on with your day.",
+    "features": [
+      "Clean, uncluttered interface",
       "Fast and lightweight",
-      "Focus on simplicity"
-    ],
-    "privacyPolicy": "Privacy Policy",
-    "backToHome": "Back to Home"
+      "Works entirely offline",
+      "Optional Premium upgrade"
+    ]
   },
-  "pixelfarm": {
-    "subtitle": "Coming soon...",
-    "about": "About",
-    "description": "An upcoming roguelike farming adventure that blends charming pixel art with deep, engaging gameplay. While we're keeping the details under wraps for now, we can promise months of captivating gameplay in a completely ad-free experience. Built with passion and designed for those who appreciate both strategy and style.",
-    "whatToExpect": "What to Expect",
-    "highlightsList": [
-      "Handcrafted pixel art",
-      "Roguelike farming mechanics",
-      "Ad-free experience",
-      "Extensive replayability"
-    ],
-    "backToHome": "Back to Home"
+  "whataretheodds": {
+    "tagline": "Beat the odds. Climb the ladder.",
+    "description": "Start at 1 in 10. Guess the number and 1 in 20 unlocks. Keep going and the ladder runs all the way to 1 in 10,000 — then to Custom odds, where you pick your own impossible number. Most attempts fail. That's the game.",
+    "features": [
+      "Eleven tiers from 1 in 10 to Custom odds",
+      "Global leaderboards via Play Games",
+      "Attempts refill over time, even while closed",
+      "Achievements and friend comparisons"
+    ]
+  },
+  "pixelwrangler": {
+    "tagline": "Tap fast. Climb the mountain.",
+    "description": "An arcade roguelite about wrangling cube-creatures out of a destabilised feed before it overwhelms you. Fifty waves, a deck of upgrade cards drafted as you climb, and a shard economy that carries progress between runs.",
+    "features": [
+      "A 50-wave run with checkpoints",
+      "Upgrade cards drafted between waves",
+      "Shard economy and a persistent perk tree",
+      "Bold cel-shaded cartoon art"
+    ]
   },
   "footer": {
-    "builtWith": "Built with React"
+    "blurb": "Independent developer building small, focused apps and games for Android.",
+    "projects": "Projects",
+    "elsewhere": "Elsewhere",
+    "privacyNote": "Privacy policies are linked from each project page."
   },
-  "meta": {
-    "platform": "Platform",
-    "engine": "Engine",
-    "android": "Android",
-    "androidIosPlanned": "Android (iOS planned)",
-    "flutter": "Flutter",
-    "godot": "Godot"
+  "notFound": {
+    "message": "That page doesn't exist — it may have been renamed or moved.",
+    "back": "Back home"
   }
 }

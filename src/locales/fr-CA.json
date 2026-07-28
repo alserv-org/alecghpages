@@ -1,53 +1,73 @@
 {
   "nav": {
     "home": "Accueil",
-    "listkeeper": "ListKeeper",
-    "pixelfarm": "Pixel Farm",
-    "github": "GitHub"
+    "github": "GitHub",
+    "toggleTheme": "Changer de thème",
+    "toggleLanguage": "Changer de langue",
+    "toggleMenu": "Ouvrir le menu"
   },
   "home": {
-    "passionStatement": "Animé par une passion pour la technologie et l'art du codage, je crée des applications qui allient fonctionnalité et design réfléchi.",
-    "featuredProjects": "Projets en vedette",
-    "listkeeperDescription": "Une application de listes d'une belle simplicité qui se concentre sur l'essentiel",
-    "listkeeperTag": "Flutter • Android",
-    "pixelfarmDescription": "Aventure agricole roguelike avec un art pixel charmant",
-    "pixelfarmTag": "Godot • En développement"
+    "role": "Développeur indépendant",
+    "greeting": "Bonjour, je suis",
+    "statement": "Je conçois de petites applications et de petits jeux Android — ceux qui font une seule chose, bien, sans vous encombrer. Tout ici est conçu, programmé et publié en solo.",
+    "seeProjects": "Voir les projets",
+    "projects": "Projets",
+    "shipped": "en chantier"
+  },
+  "status": {
+    "live": "Sur Google Play",
+    "soon": "Bientôt disponible",
+    "dev": "En développement"
+  },
+  "project": {
+    "about": "À propos",
+    "features": "Points saillants",
+    "details": "Détails",
+    "platform": "Plateforme",
+    "engine": "Conçu avec",
+    "status": "État",
+    "back": "Tous les projets",
+    "privacyPolicy": "Politique de confidentialité",
+    "getItOnGooglePlay": "Disponible sur Google Play"
   },
   "listkeeper": {
-    "subtitle": "Des listes simples. Bien faites.",
-    "about": "À propos",
-    "description": "Dans un monde d'applications de productivité surchargées qui tentent de tout faire, ListKeeper adopte une approche différente. C'est une application de gestion de listes d'une belle simplicité qui excelle dans une seule chose : vous aider à organiser vos pensées et vos tâches sans distraction. Pas de fonctionnalités complexes que vous n'utiliserez jamais, pas d'interfaces accablantes — juste une création de listes élégante et ciblée qui reste discrète.",
-    "highlights": "Points saillants",
-    "highlightsList": [
-      "Interface claire et intuitive",
+    "tagline": "Des listes simples, bien faites.",
+    "description": "La plupart des applications de listes grossissent jusqu'à exiger un tutoriel. ListKeeper fait l'inverse : un endroit rapide et épuré pour vos listes, sans fonctions superflues que vous n'ouvrirez jamais. Créez une liste, cochez, passez à autre chose.",
+    "features": [
+      "Interface claire et dépouillée",
       "Rapide et léger",
-      "Accent sur la simplicité"
-    ],
-    "privacyPolicy": "Politique de confidentialité",
-    "backToHome": "Retour à l'accueil"
+      "Fonctionne entièrement hors ligne",
+      "Version Premium optionnelle"
+    ]
   },
-  "pixelfarm": {
-    "subtitle": "Bientôt disponible...",
-    "about": "À propos",
-    "description": "Une aventure agricole roguelike à venir qui allie un art pixel charmant à un gameplay captivant et profond. Bien que nous gardions les détails secrets pour l'instant, nous pouvons vous promettre des mois de gameplay captivant dans une expérience complètement sans publicité. Conçu avec passion pour ceux qui apprécient autant la stratégie que le style.",
-    "whatToExpect": "À quoi s'attendre",
-    "highlightsList": [
-      "Art pixel fait à la main",
-      "Mécaniques agricoles roguelike",
-      "Expérience sans publicité",
-      "Rejouabilité extensive"
-    ],
-    "backToHome": "Retour à l'accueil"
+  "whataretheodds": {
+    "tagline": "Défiez les probabilités. Grimpez l'échelle.",
+    "description": "Commencez à 1 sur 10. Devinez le nombre et le palier 1 sur 20 se débloque. Continuez et l'échelle monte jusqu'à 1 sur 10 000 — puis jusqu'aux cotes personnalisées, où vous choisissez votre propre nombre impossible. La plupart des tentatives échouent. C'est le principe du jeu.",
+    "features": [
+      "Onze paliers, de 1 sur 10 aux cotes personnalisées",
+      "Classements mondiaux via Play Games",
+      "Les tentatives se rechargent avec le temps, même hors ligne",
+      "Succès et comparaisons entre amis"
+    ]
+  },
+  "pixelwrangler": {
+    "tagline": "Tapez vite. Gravissez la montagne.",
+    "description": "Un roguelite d'arcade où il faut extraire des créatures-cubes d'un flux déstabilisé avant qu'il ne vous submerge. Cinquante vagues, des cartes d'amélioration à repêcher au fil de l'ascension, et une économie d'éclats qui reporte votre progression d'une partie à l'autre.",
+    "features": [
+      "Une ascension de 50 vagues avec points de contrôle",
+      "Cartes d'amélioration repêchées entre les vagues",
+      "Économie d'éclats et arbre d'avantages persistant",
+      "Direction artistique cartoon en cel-shading"
+    ]
   },
   "footer": {
-    "builtWith": "Conçu avec React"
+    "blurb": "Développeur indépendant créant de petites applications et de petits jeux pour Android.",
+    "projects": "Projets",
+    "elsewhere": "Ailleurs",
+    "privacyNote": "Les politiques de confidentialité sont liées depuis chaque page de projet."
   },
-  "meta": {
-    "platform": "Plateforme",
-    "engine": "Moteur",
-    "android": "Android",
-    "androidIosPlanned": "Android (iOS prévu)",
-    "flutter": "Flutter",
-    "godot": "Godot"
+  "notFound": {
+    "message": "Cette page n'existe pas — elle a peut-être été renommée ou déplacée.",
+    "back": "Retour à l'accueil"
   }
 }

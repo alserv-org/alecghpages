@@ -1,58 +1,75 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { ArrowRight, Github } from 'lucide-react';
 import { useTranslation } from '../contexts/LanguageContext';
+import { projects } from '../data/projects';
+import { GITHUB_URL, OWNER } from '../data/site';
+import StatusPill from '../components/StatusPill';
 
 const Home = () => {
   const { t } = useTranslation();
 
   return (
-    <div className="home-page">
-      <section className="hero-section">
-        <div className="hero-content">
-          <div className="hero-image">
-            <img
-              src="/alec-mini.png"
-              alt="Alec Chamberland"
-              className="funko-image"
-            />
-          </div>
-          <div className="hero-text">
-            <h1>Alec Chamberland</h1>
-            <p className="passion-statement">
-              {t('home.passionStatement')}
-            </p>
+    <div className="home">
+      <section className="hero">
+        <div className="hero-portrait">
+          <img src="/alec-mini.png" alt={OWNER} width={148} height={148} />
+        </div>
+        <div>
+          <span className="eyebrow">{t('home.role')}</span>
+          <h1>
+            {t('home.greeting')} <span className="gradient-text">{OWNER}</span>
+          </h1>
+          <p className="hero-statement">{t('home.statement')}</p>
+          <div className="hero-actions">
+            <a href="#projects" className="btn btn-primary">
+              {t('home.seeProjects')} <ArrowRight size={17} />
+            </a>
+            <a
+              href={GITHUB_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-ghost"
+            >
+              <Github size={17} /> {t('nav.github')}
+            </a>
           </div>
         </div>
       </section>
 
-      <section className="featured-projects">
-        <h2>{t('home.featuredProjects')}</h2>
-        <div className="project-cards">
-          <div className="project-card listkeeper-card">
-            <Link to="/listkeeper" className="card-link">
-              <h3>{t('nav.listkeeper')}</h3>
-              <p>{t('home.listkeeperDescription')}</p>
-              <span className="project-tag">{t('home.listkeeperTag')}</span>
-            </Link>
-            <a
-              href="https://play.google.com/store/apps/details?id=org.alserv.listkeeper"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="card-play-badge"
-              onClick={(e) => e.stopPropagation()}
-            >
-              <img
-                src="/GetItOnGooglePlay_Badge_Web_color_English.png"
-                alt="Get it on Google Play"
-                className="card-play-img"
-              />
-            </a>
-          </div>
-          <Link to="/pixelfarm" className="project-card">
-            <h3>{t('nav.pixelfarm')}</h3>
-            <p>{t('home.pixelfarmDescription')}</p>
-            <span className="project-tag">{t('home.pixelfarmTag')}</span>
-          </Link>
+      <section id="projects" className="projects">
+        <div className="section-head">
+          <h2>{t('home.projects')}</h2>
+          <span className="section-count">
+            {projects.length} {t('home.shipped')}
+          </span>
+        </div>
+
+        <div className="project-grid">
+          {projects.map((project) => {
+            const Icon = project.icon;
+            return (
+              <Link
+                key={project.id}
+                to={`/${project.slug}`}
+                className="project-card"
+                style={{ ['--accent' as string]: `var(${project.accentVar})` }}
+              >
+                <div className="card-top">
+                  <span className="card-mark">
+                    <Icon size={22} strokeWidth={2} />
+                  </span>
+                  <StatusPill status={project.status} />
+                </div>
+                <h3>{project.title}</h3>
+                <p className="card-desc">{t(`${project.id}.tagline`)}</p>
+                <div className="chip-row">
+                  <span className="chip">{project.engine}</span>
+                  <span className="chip">{project.platform}</span>
+                </div>
+              </Link>
+            );
+          })}
         </div>
       </section>
     </div>

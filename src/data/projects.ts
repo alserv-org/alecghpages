@@ -1,38 +1,64 @@
-// Project metadata
+import { ListChecks, Boxes, Dices, type LucideIcon } from 'lucide-react';
+
+/** Drives the release badge, and whether a Play link is rendered at all. */
+export type Status = 'live' | 'soon' | 'dev';
+
 export interface Project {
   id: string;
+  /** Route segment, also the i18n namespace under locales. */
+  slug: string;
   title: string;
-  description: string;
-  platform?: string;
-  engine?: string;
-  highlights?: string[];
+  icon: LucideIcon;
+  status: Status;
+  /** CSS custom property scoping the page/card accent. */
+  accentVar: string;
+  platform: string;
+  engine: string;
+  /** Play listing — null until the app is actually published, so we never
+   *  render a badge that 404s. */
+  playUrl: string | null;
+  /** Served from this same site out of public/. */
+  privacyUrl: string;
 }
 
-export const projects = {
-  listkeeper: {
+export const projects: Project[] = [
+  {
     id: 'listkeeper',
+    slug: 'listkeeper',
     title: 'ListKeeper',
-    description: 'In a world of bloated productivity apps that try to do everything, ListKeeper takes a different approach. It\'s a beautifully simple list management app that does one thing exceptionally well: helping you organize your thoughts and tasks without the noise. No complex features you\'ll never use, no overwhelming interfaces—just elegant, focused list-making that stays out of your way.',
+    icon: ListChecks,
+    status: 'live',
+    accentVar: '--accent-listkeeper',
     platform: 'Android',
     engine: 'Flutter',
-    highlights: [
-      'Clean, intuitive interface',
-      'Fast and lightweight',
-      'Focus on simplicity'
-    ]
-  } as Project,
+    playUrl: 'https://play.google.com/store/apps/details?id=org.alserv.listkeeper',
+    privacyUrl: '/privacy-policy-listkeeper-en.html',
+  },
+  {
+    id: 'whataretheodds',
+    slug: 'what-are-the-odds',
+    title: 'What Are The Odds',
+    icon: Dices,
+    status: 'soon',
+    accentVar: '--accent-whataretheodds',
+    platform: 'Android',
+    engine: 'LibGDX',
+    playUrl: null,
+    privacyUrl: '/privacy-policy-whataretheodds-en.html',
+  },
+  {
+    id: 'pixelwrangler',
+    slug: 'pixel-wrangler',
+    title: 'Pixel Wrangler',
+    icon: Boxes,
+    status: 'dev',
+    accentVar: '--accent-pixelwrangler',
+    platform: 'Android',
+    engine: 'LibGDX',
+    playUrl: null,
+    privacyUrl: '/privacy-policy-pixelwrangler-en.html',
+  },
+];
 
-  pixelfarm: {
-    id: 'pixelfarm',
-    title: 'Pixel Farm',
-    description: 'An upcoming roguelike farming adventure that blends charming pixel art with deep, engaging gameplay. While we\'re keeping the details under wraps for now, we can promise months of captivating gameplay in a completely ad-free experience. Built with passion and designed for those who appreciate both strategy and style.',
-    platform: 'Android (iOS planned)',
-    engine: 'Godot',
-    highlights: [
-      'Handcrafted pixel art',
-      'Roguelike farming mechanics',
-      'Ad-free experience',
-      'Extensive replayability'
-    ]
-  } as Project
-};
+export const projectBySlug = (slug: string): Project | undefined =>
+  projects.find((p) => p.slug === slug);
