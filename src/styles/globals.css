@@ -21,9 +21,9 @@
   --text-faint: #6b7488;
 
   /* Signature gradient — wordmark, focus rings, accents */
-  --brand-1: #7c5cff;
-  --brand-2: #22d3ee;
-  --brand-glow: rgba(124, 92, 255, 0.28);
+  --brand-1: #39ff88;
+  --brand-2: #059669;
+  --brand-glow: rgba(57, 255, 136, 0.24);
 
   /* Per-product accents. Each product page sets --accent from these. */
   --accent-listkeeper: #34d399;
@@ -64,9 +64,9 @@
   --text-muted: #59617a;
   --text-faint: #858da0;
 
-  --brand-1: #6438f5;
-  --brand-2: #0891b2;
-  --brand-glow: rgba(100, 56, 245, 0.18);
+  --brand-1: #059669;
+  --brand-2: #0d9488;
+  --brand-glow: rgba(5, 150, 105, 0.16);
 
   --accent-listkeeper: #059669;
   --accent-pixelwrangler: #0891b2;

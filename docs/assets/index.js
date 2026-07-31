@@ -9586,7 +9586,8 @@ const projects = [
     platform: "Android",
     engine: "Flutter",
     playUrl: "https://play.google.com/store/apps/details?id=org.alserv.listkeeper",
-    privacyUrl: "/privacy-policy-listkeeper-en.html"
+    privacyUrl: "/privacy-policy-listkeeper-en.html",
+    logoSrc: "/logos/listkeeper.png"
   },
   {
     id: "whataretheodds",
