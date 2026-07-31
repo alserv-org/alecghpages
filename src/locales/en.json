@@ -28,7 +28,8 @@
     "status": "Status",
     "back": "All projects",
     "privacyPolicy": "Privacy policy",
-    "getItOnGooglePlay": "Get it on Google Play"
+    "getItOnGooglePlay": "Get it on Google Play",
+    "joinClosedTesting": "Not public yet — tap to join closed testing on Google Play"
   },
   "listkeeper": {
     "tagline": "Simple lists, done right.",

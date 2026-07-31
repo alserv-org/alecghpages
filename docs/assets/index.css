@@ -718,6 +718,49 @@ p {
   width: auto;
 }
 
+/* Not live yet, but a real link — visually distinct from a real store badge. */
+.play-badge-soon {
+  opacity: 0.6;
+  filter: grayscale(0.6);
+}
+
+.play-badge-soon:hover {
+  opacity: 0.85;
+  filter: grayscale(0.3) brightness(1.08);
+}
+
+.play-badge-caption {
+  margin-top: 0.6rem;
+  font-size: 0.85rem;
+  color: var(--text-faint);
+  max-width: 32ch;
+}
+
+/* ── Screenshots ───────────────────────────────────────────────────────── */
+
+.screenshot-row {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  padding-bottom: 0.5rem;
+  scrollbar-width: thin;
+}
+
+.screenshot-row img {
+  height: 340px;
+  width: auto;
+  flex-shrink: 0;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-md);
+}
+
+@media (max-width: 720px) {
+  .screenshot-row img {
+    height: 260px;
+  }
+}
+
 .project-foot {
   display: flex;
   flex-wrap: wrap;

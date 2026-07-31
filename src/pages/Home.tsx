@@ -57,7 +57,11 @@ const Home = () => {
               >
                 <div className="card-top">
                   <span className="card-mark">
-                    <Icon size={22} strokeWidth={2} />
+                    {project.logoSrc ? (
+                      <img src={project.logoSrc} alt="" width={22} height={22} />
+                    ) : (
+                      <Icon size={22} strokeWidth={2} />
+                    )}
                   </span>
                   <StatusPill status={project.status} />
                 </div>

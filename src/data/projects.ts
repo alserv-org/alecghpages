@@ -14,11 +14,15 @@ export interface Project {
   accentVar: string;
   platform: string;
   engine: string;
-  /** Play listing — null until the app is actually published, so we never
-   *  render a badge that 404s. */
+  /** Play listing — null until there's a real, resolvable URL (a live store
+   *  page or a closed-testing opt-in), so we never render a badge that 404s. */
   playUrl: string | null;
   /** Served from this same site out of public/. */
   privacyUrl: string;
+  /** Real app icon, shown instead of the Lucide glyph when set. */
+  logoSrc?: string;
+  /** In-app screenshots, shown as a gallery on the project page. */
+  screenshots?: string[];
 }
 
 export const projects: Project[] = [
@@ -43,8 +47,14 @@ export const projects: Project[] = [
     accentVar: '--accent-whataretheodds',
     platform: 'Android',
     engine: 'LibGDX',
-    playUrl: null,
+    playUrl: 'https://play.google.com/apps/testing/org.alserv.whataretheodds',
     privacyUrl: '/privacy-policy-whataretheodds-en.html',
+    logoSrc: '/logos/what-are-the-odds.png',
+    screenshots: [
+      '/screenshots/what-are-the-odds/1-menu.png',
+      '/screenshots/what-are-the-odds/2-gameplay.png',
+      '/screenshots/what-are-the-odds/3-result.png',
+    ],
   },
   {
     id: 'pixelwrangler',

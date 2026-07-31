@@ -9143,7 +9143,7 @@ function useViewTransitionState(to, { relative } = {}) {
 const nav$1 = { "home": "Home", "github": "GitHub", "toggleTheme": "Toggle theme", "toggleLanguage": "Toggle language", "toggleMenu": "Toggle menu" };
 const home$1 = { "role": "Independent developer", "greeting": "Hi, I'm", "statement": "I build small, focused apps and games for Android — the kind that do one thing properly and stay out of your way. Everything here is designed, written and shipped solo.", "seeProjects": "See projects", "projects": "Projects", "shipped": "in the works" };
 const status$1 = { "live": "On Google Play", "soon": "Coming soon", "dev": "In development" };
-const project$1 = { "about": "About", "features": "Highlights", "details": "Details", "platform": "Platform", "engine": "Built with", "status": "Status", "back": "All projects", "privacyPolicy": "Privacy policy", "getItOnGooglePlay": "Get it on Google Play" };
+const project$1 = { "about": "About", "features": "Highlights", "details": "Details", "platform": "Platform", "engine": "Built with", "status": "Status", "back": "All projects", "privacyPolicy": "Privacy policy", "getItOnGooglePlay": "Get it on Google Play", "joinClosedTesting": "Not public yet — tap to join closed testing on Google Play" };
 const listkeeper$1 = { "tagline": "Simple lists, done right.", "description": "Most list apps grow until they need a tutorial. ListKeeper goes the other way: a fast, clean place to keep your lists, with nothing bolted on that you'll never open. Make a list, check things off, get on with your day.", "features": ["Clean, uncluttered interface", "Fast and lightweight", "Works entirely offline", "Optional Premium upgrade"] };
 const whataretheodds$1 = { "tagline": "Beat the odds. Climb the ladder.", "description": "Start at 1 in 10. Guess the number and 1 in 20 unlocks. Keep going and the ladder runs all the way to 1 in 10,000 — then to Custom odds, where you pick your own impossible number. Most attempts fail. That's the game.", "features": ["Eleven tiers from 1 in 10 to Custom odds", "Global leaderboards via Play Games", "Attempts refill over time, even while closed", "Achievements and friend comparisons"] };
 const pixelwrangler$1 = { "tagline": "Tap fast. Climb the mountain.", "description": "An arcade roguelite about wrangling cube-creatures out of a destabilised feed before it overwhelms you. Fifty waves, a deck of upgrade cards drafted as you climb, and a shard economy that carries progress between runs.", "features": ["A 50-wave run with checkpoints", "Upgrade cards drafted between waves", "Shard economy and a persistent perk tree", "Bold cel-shaded cartoon art"] };
@@ -9163,7 +9163,7 @@ const enTranslations = {
 const nav = { "home": "Accueil", "github": "GitHub", "toggleTheme": "Changer de thème", "toggleLanguage": "Changer de langue", "toggleMenu": "Ouvrir le menu" };
 const home = { "role": "Développeur indépendant", "greeting": "Bonjour, je suis", "statement": "Je conçois de petites applications et de petits jeux Android — ceux qui font une seule chose, bien, sans vous encombrer. Tout ici est conçu, programmé et publié en solo.", "seeProjects": "Voir les projets", "projects": "Projets", "shipped": "en chantier" };
 const status = { "live": "Sur Google Play", "soon": "Bientôt disponible", "dev": "En développement" };
-const project = { "about": "À propos", "features": "Points saillants", "details": "Détails", "platform": "Plateforme", "engine": "Conçu avec", "status": "État", "back": "Tous les projets", "privacyPolicy": "Politique de confidentialité", "getItOnGooglePlay": "Disponible sur Google Play" };
+const project = { "about": "À propos", "features": "Points saillants", "details": "Détails", "platform": "Plateforme", "engine": "Conçu avec", "status": "État", "back": "Tous les projets", "privacyPolicy": "Politique de confidentialité", "getItOnGooglePlay": "Disponible sur Google Play", "joinClosedTesting": "Pas encore public — touchez pour rejoindre les essais fermés sur Google Play" };
 const listkeeper = { "tagline": "Des listes simples, bien faites.", "description": "La plupart des applications de listes grossissent jusqu'à exiger un tutoriel. ListKeeper fait l'inverse : un endroit rapide et épuré pour vos listes, sans fonctions superflues que vous n'ouvrirez jamais. Créez une liste, cochez, passez à autre chose.", "features": ["Interface claire et dépouillée", "Rapide et léger", "Fonctionne entièrement hors ligne", "Version Premium optionnelle"] };
 const whataretheodds = { "tagline": "Défiez les probabilités. Grimpez l'échelle.", "description": "Commencez à 1 sur 10. Devinez le nombre et le palier 1 sur 20 se débloque. Continuez et l'échelle monte jusqu'à 1 sur 10 000 — puis jusqu'aux cotes personnalisées, où vous choisissez votre propre nombre impossible. La plupart des tentatives échouent. C'est le principe du jeu.", "features": ["Onze paliers, de 1 sur 10 aux cotes personnalisées", "Classements mondiaux via Play Games", "Les tentatives se rechargent avec le temps, même hors ligne", "Succès et comparaisons entre amis"] };
 const pixelwrangler = { "tagline": "Tapez vite. Gravissez la montagne.", "description": "Un roguelite d'arcade où il faut extraire des créatures-cubes d'un flux déstabilisé avant qu'il ne vous submerge. Cinquante vagues, des cartes d'amélioration à repêcher au fil de l'ascension, et une économie d'éclats qui reporte votre progression d'une partie à l'autre.", "features": ["Une ascension de 50 vagues avec points de contrôle", "Cartes d'amélioration repêchées entre les vagues", "Économie d'éclats et arbre d'avantages persistant", "Direction artistique cartoon en cel-shading"] };
@@ -9597,8 +9597,14 @@ const projects = [
     accentVar: "--accent-whataretheodds",
     platform: "Android",
     engine: "LibGDX",
-    playUrl: null,
-    privacyUrl: "/privacy-policy-whataretheodds-en.html"
+    playUrl: "https://play.google.com/apps/testing/org.alserv.whataretheodds",
+    privacyUrl: "/privacy-policy-whataretheodds-en.html",
+    logoSrc: "/logos/what-are-the-odds.png",
+    screenshots: [
+      "/screenshots/what-are-the-odds/1-menu.png",
+      "/screenshots/what-are-the-odds/2-gameplay.png",
+      "/screenshots/what-are-the-odds/3-result.png"
+    ]
   },
   {
     id: "pixelwrangler",
@@ -9747,6 +9753,25 @@ const Footer = () => {
     ] })
   ] });
 };
+class ErrorBoundary extends reactExports.Component {
+  state = { hasError: false };
+  static getDerivedStateFromError() {
+    return { hasError: true };
+  }
+  componentDidCatch(error) {
+    console.error("Render error caught by ErrorBoundary:", error);
+  }
+  render() {
+    if (this.state.hasError) {
+      return /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "notfound", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx("h1", { className: "gradient-text", children: "Oops" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { children: "Something went wrong loading this page." }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("button", { className: "btn btn-primary", onClick: () => window.location.reload(), children: "Reload" })
+      ] });
+    }
+    return this.props.children;
+  }
+}
 const StatusPill = ({ status: status2 }) => {
   const { t } = useTranslation();
   return /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { className: `status status-${status2}`, children: [
@@ -9809,7 +9834,7 @@ const Home = () => {
             style: { ["--accent"]: `var(${project2.accentVar})` },
             children: [
               /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "card-top", children: [
-                /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "card-mark", children: /* @__PURE__ */ jsxRuntimeExports.jsx(Icon2, { size: 22, strokeWidth: 2 }) }),
+                /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "card-mark", children: project2.logoSrc ? /* @__PURE__ */ jsxRuntimeExports.jsx("img", { src: project2.logoSrc, alt: "", width: 22, height: 22 }) : /* @__PURE__ */ jsxRuntimeExports.jsx(Icon2, { size: 22, strokeWidth: 2 }) }),
                 /* @__PURE__ */ jsxRuntimeExports.jsx(StatusPill, { status: project2.status })
               ] }),
               /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { children: project2.title }),
@@ -9842,10 +9867,13 @@ const ProjectPage = () => {
   const { slug } = useParams();
   const { t } = useTranslation();
   const project2 = slug ? projectBySlug(slug) : void 0;
-  reactExports.useEffect(() => window.scrollTo(0, 0), [slug]);
+  reactExports.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [slug]);
   if (!project2) return /* @__PURE__ */ jsxRuntimeExports.jsx(NotFound, {});
   const Icon2 = project2.icon;
   const features = t(`${project2.id}.features`);
+  const isLive = project2.status === "live";
   return /* @__PURE__ */ jsxRuntimeExports.jsxs(
     "article",
     {
@@ -9853,7 +9881,7 @@ const ProjectPage = () => {
       style: { ["--accent"]: `var(${project2.accentVar})` },
       children: [
         /* @__PURE__ */ jsxRuntimeExports.jsxs("header", { className: "project-hero", children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "card-mark", children: /* @__PURE__ */ jsxRuntimeExports.jsx(Icon2, { size: 22, strokeWidth: 2 }) }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "card-mark", children: project2.logoSrc ? /* @__PURE__ */ jsxRuntimeExports.jsx("img", { src: project2.logoSrc, alt: "", width: 22, height: 22 }) : /* @__PURE__ */ jsxRuntimeExports.jsx(Icon2, { size: 22, strokeWidth: 2 }) }),
           /* @__PURE__ */ jsxRuntimeExports.jsx("h1", { children: project2.title }),
           /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "project-tagline", children: t(`${project2.id}.tagline`) }),
           /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "project-hero-meta", children: [
@@ -9862,22 +9890,26 @@ const ProjectPage = () => {
             /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "chip", children: project2.platform })
           ] })
         ] }),
-        project2.playUrl && /* @__PURE__ */ jsxRuntimeExports.jsx("section", { className: "project-section", children: /* @__PURE__ */ jsxRuntimeExports.jsx(
-          "a",
-          {
-            href: project2.playUrl,
-            target: "_blank",
-            rel: "noopener noreferrer",
-            className: "play-badge",
-            children: /* @__PURE__ */ jsxRuntimeExports.jsx(
-              "img",
-              {
-                src: "/GetItOnGooglePlay_Badge_Web_color_English.png",
-                alt: t("project.getItOnGooglePlay")
-              }
-            )
-          }
-        ) }),
+        project2.screenshots && project2.screenshots.length > 0 && /* @__PURE__ */ jsxRuntimeExports.jsx("section", { className: "project-section screenshot-row", children: project2.screenshots.map((src) => /* @__PURE__ */ jsxRuntimeExports.jsx("img", { src, alt: "", loading: "lazy" }, src)) }),
+        project2.playUrl && /* @__PURE__ */ jsxRuntimeExports.jsxs("section", { className: "project-section", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsx(
+            "a",
+            {
+              href: project2.playUrl,
+              target: "_blank",
+              rel: "noopener noreferrer",
+              className: isLive ? "play-badge" : "play-badge play-badge-soon",
+              children: /* @__PURE__ */ jsxRuntimeExports.jsx(
+                "img",
+                {
+                  src: "/GetItOnGooglePlay_Badge_Web_color_English.png",
+                  alt: t("project.getItOnGooglePlay")
+                }
+              )
+            }
+          ),
+          !isLive && /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "play-badge-caption", children: t("project.joinClosedTesting") })
+        ] }),
         /* @__PURE__ */ jsxRuntimeExports.jsxs("section", { className: "project-section", children: [
           /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { children: t("project.about") }),
           /* @__PURE__ */ jsxRuntimeExports.jsx("p", { children: t(`${project2.id}.description`) })
@@ -9935,12 +9967,12 @@ function App() {
   return /* @__PURE__ */ jsxRuntimeExports.jsx(ThemeProvider, { children: /* @__PURE__ */ jsxRuntimeExports.jsx(LanguageProvider, { children: /* @__PURE__ */ jsxRuntimeExports.jsx(BrowserRouter, { children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "app-container", children: [
     /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "aurora", "aria-hidden": "true" }),
     /* @__PURE__ */ jsxRuntimeExports.jsx(Navbar, {}),
-    /* @__PURE__ */ jsxRuntimeExports.jsx("main", { className: "main-content", children: /* @__PURE__ */ jsxRuntimeExports.jsxs(Routes, { children: [
+    /* @__PURE__ */ jsxRuntimeExports.jsx("main", { className: "main-content", children: /* @__PURE__ */ jsxRuntimeExports.jsx(ErrorBoundary, { children: /* @__PURE__ */ jsxRuntimeExports.jsxs(Routes, { children: [
       /* @__PURE__ */ jsxRuntimeExports.jsx(Route, { path: "/", element: /* @__PURE__ */ jsxRuntimeExports.jsx(Home, {}) }),
       /* @__PURE__ */ jsxRuntimeExports.jsx(Route, { path: "/pixelfarm", element: /* @__PURE__ */ jsxRuntimeExports.jsx(Navigate, { to: "/pixel-wrangler", replace: true }) }),
       /* @__PURE__ */ jsxRuntimeExports.jsx(Route, { path: "/:slug", element: /* @__PURE__ */ jsxRuntimeExports.jsx(ProjectPage, {}) }),
       /* @__PURE__ */ jsxRuntimeExports.jsx(Route, { path: "*", element: /* @__PURE__ */ jsxRuntimeExports.jsx(NotFound, {}) })
-    ] }) }),
+    ] }) }) }),
     /* @__PURE__ */ jsxRuntimeExports.jsx(Footer, {})
   ] }) }) }) });
 }

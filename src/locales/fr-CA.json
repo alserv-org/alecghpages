@@ -28,7 +28,8 @@
     "status": "État",
     "back": "Tous les projets",
     "privacyPolicy": "Politique de confidentialité",
-    "getItOnGooglePlay": "Disponible sur Google Play"
+    "getItOnGooglePlay": "Disponible sur Google Play",
+    "joinClosedTesting": "Pas encore public — touchez pour rejoindre les essais fermés sur Google Play"
   },
   "listkeeper": {
     "tagline": "Des listes simples, bien faites.",

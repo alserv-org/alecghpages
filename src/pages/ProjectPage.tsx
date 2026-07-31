@@ -16,7 +16,13 @@ const ProjectPage = () => {
   const { t } = useTranslation();
   const project = slug ? projectBySlug(slug) : undefined;
 
-  useEffect(() => window.scrollTo(0, 0), [slug]);
+  useEffect(() => {
+    // Some browsers return a Promise from scrollTo when `scroll-behavior:
+    // smooth` is set (see globals.css); an effect must never implicitly
+    // return that, or React tries to call it as the cleanup function on the
+    // next render and throws.
+    window.scrollTo(0, 0);
+  }, [slug]);
 
   // Rendered in place rather than redirected: /:slug would match a /404 route
   // too, and the two would bounce off each other forever.
@@ -24,6 +30,7 @@ const ProjectPage = () => {
 
   const Icon = project.icon;
   const features: string[] = t(`${project.id}.features`);
+  const isLive = project.status === 'live';
 
   return (
     <article
@@ -32,7 +39,11 @@ const ProjectPage = () => {
     >
       <header className="project-hero">
         <span className="card-mark">
-          <Icon size={22} strokeWidth={2} />
+          {project.logoSrc ? (
+            <img src={project.logoSrc} alt="" width={22} height={22} />
+          ) : (
+            <Icon size={22} strokeWidth={2} />
+          )}
         </span>
         <h1>{project.title}</h1>
         <p className="project-tagline">{t(`${project.id}.tagline`)}</p>
@@ -43,19 +54,28 @@ const ProjectPage = () => {
         </div>
       </header>
 
+      {project.screenshots && project.screenshots.length > 0 && (
+        <section className="project-section screenshot-row">
+          {project.screenshots.map((src) => (
+            <img key={src} src={src} alt="" loading="lazy" />
+          ))}
+        </section>
+      )}
+
       {project.playUrl && (
         <section className="project-section">
           <a
             href={project.playUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="play-badge"
+            className={isLive ? 'play-badge' : 'play-badge play-badge-soon'}
           >
             <img
               src="/GetItOnGooglePlay_Badge_Web_color_English.png"
               alt={t('project.getItOnGooglePlay')}
             />
           </a>
+          {!isLive && <p className="play-badge-caption">{t('project.joinClosedTesting')}</p>}
         </section>
       )}
 
