@@ -1,0 +1,19 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": ["config:recommended"],
+  "timezone": "America/Toronto",
+  "minimumReleaseAge": "3 days",
+  "semanticCommits": "enabled",
+  "packageRules": [
+    {
+      "description": "No CI runs on pull requests in this repo yet, so there's nothing to gate an automerge on. Every update lands as a PR for manual review until CI exists.",
+      "matchUpdateTypes": ["patch", "minor", "major", "digest", "pin"],
+      "automerge": false
+    },
+    {
+      "description": "Group all patch-level bumps into one PR.",
+      "matchUpdateTypes": ["patch"],
+      "groupName": "patch updates"
+    }
+  ]
+}

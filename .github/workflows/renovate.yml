@@ -1,0 +1,34 @@
+name: Renovate
+
+on:
+  schedule:
+    # Mon/Thu 23:00 America/Toronto — cron is UTC, DST shifts the offset twice a year,
+    # so both candidate UTC times are listed. The one that's currently wrong just
+    # runs Renovate an extra ~hour off target; harmless since it's idempotent.
+    - cron: '0 3 * * 2,5'  # 23:00 EDT (UTC-4)
+    - cron: '0 4 * * 2,5'  # 23:00 EST (UTC-5)
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+
+jobs:
+  renovate:
+    name: Renovate
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Self-hosted Renovate
+        uses: renovatebot/github-action@v46.1.21
+        env:
+          RENOVATE_REPOSITORIES: ${{ github.repository }}
+          # Verbose logs on a debug re-run ("Enable debug logging" on
+          # workflow_dispatch/re-run), quiet otherwise.
+          LOG_LEVEL: ${{ runner.debug == '1' && 'debug' || 'info' }}
+        with:
+          # A PAT, not the default GITHUB_TOKEN: PRs opened with the default
+          # token don't trigger other workflows' `on: pull_request` (this
+          # repo's CI), which would silently starve every Renovate PR of
+          # a CI run and make automerge fire without validation.
+          token: ${{ secrets.RENOVATE_TOKEN }}
