@@ -3,6 +3,7 @@
   "extends": ["config:recommended"],
   "timezone": "America/Toronto",
   "minimumReleaseAge": "3 days",
+  "prHourlyLimit": 0,
   "semanticCommits": "enabled",
   "packageRules": [
     {
