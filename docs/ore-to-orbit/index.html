@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj4KICA8ZGVmcz4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iZyIgeDE9IjAiIHkxPSIwIiB4Mj0iMSIgeTI9IjEiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiM3YzVjZmYiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjMjJkM2VlIi8+CiAgICA8L2xpbmVhckdyYWRpZW50PgogIDwvZGVmcz4KICA8cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgcng9IjIyIiBmaWxsPSJ1cmwoI2cpIi8+CiAgPHRleHQgeD0iNTAiIHk9IjYyIiBmb250LWZhbWlseT0ic3lzdGVtLXVpLEFyaWFsIiBmb250LXNpemU9IjQ0IiBmaWxsPSIjZmZmZmZmIiBmb250LXdlaWdodD0iNzAwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5BQzwvdGV4dD4KPC9zdmc+"
+    />
+
+    <title>Ore to Orbit — mine a flat world, build a rocket out of shapes</title>
+    <meta
+      name="description"
+      content="A 2D physics sandbox for Android, in development. Everything is a point, line, triangle or square, and colour decides what a shape does."
+    />
+    <link rel="canonical" href="https://www.alserv.org/ore-to-orbit/" />
+    <meta name="theme-color" content="#08090d" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#fbfcfe" media="(prefers-color-scheme: light)" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.alserv.org/ore-to-orbit/" />
+    <meta property="og:title" content="Ore to Orbit — mine a flat world, build a rocket out of shapes" />
+    <meta
+      property="og:description"
+      content="A 2D physics sandbox for Android, in development. Everything is a point, line, triangle or square, and colour decides what a shape does."
+    />
+    <meta name="twitter:card" content="summary" />
+
+    <!--
+      Paint the stored theme before first render so a dark-mode visitor never
+      sees a white flash. Mirrors resolveInitialTheme() in ThemeContext.tsx —
+      change one, change the other.
+    -->
+    <script>
+      (function () {
+        try {
+          var saved = localStorage.getItem('preferred-theme');
+          var theme =
+            saved === 'light' || saved === 'dark'
+              ? saved
+              : window.matchMedia('(prefers-color-scheme: light)').matches
+                ? 'light'
+                : 'dark';
+          document.documentElement.setAttribute('data-theme', theme);
+        } catch (e) {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        }
+      })();
+    </script>
+
+    <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "437d59b58b8a40d69115f0d41deebd40"}'></script><!-- End Cloudflare Web Analytics -->
+    <script type="module" crossorigin src="/assets/index.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index.css">
+  </head>
+  <body>
+    <div id="root"></div>
+    <script src='https://storage.ko-fi.com/cdn/scripts/overlay-widget.js'></script>
+    <script>
+      kofiWidgetOverlay.draw('alecc08', {
+        'type': 'floating-chat',
+        'floating-chat.donateButton.text': 'Support me',
+        'floating-chat.donateButton.background-color': '#7c5cff',
+        'floating-chat.donateButton.text-color': '#fff'
+      });
+    </script>
+  </body>
+</html>

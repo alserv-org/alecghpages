@@ -53,13 +53,34 @@
   },
   "pixelwrangler": {
     "tagline": "Tap fast. Climb the mountain.",
-    "description": "An arcade roguelite about wrangling cube-creatures out of a destabilised feed before it overwhelms you. Fifty waves, a deck of upgrade cards drafted as you climb, and a shard economy that carries progress between runs.",
+    "description": "The feed is broken and wild pixels are pouring out of the glitch. Tap them out of the air before they escape, dodge what's hiding in the storm, and climb one 50-wave mountain that keeps getting wilder. Every run is a build — and a run that ends badly still pays out.",
     "features": [
-      "A 50-wave run with checkpoints",
-      "Upgrade cards drafted between waves",
-      "Shard economy and a persistent perk tree",
-      "Bold cel-shaded cartoon art"
+      "A 50-wave run with a checkpoint every ten",
+      "One of three upgrade cards drafted after every wave",
+      "Shards from every run, spent on a 16-perk tree",
+      "Five themed acts, from the lab to the glitch dimension"
     ]
+  },
+  "oretoorbit": {
+    "tagline": "Mine a flat world. Build a rocket out of shapes. Leave.",
+    "description": "You're stuck in a flat, two-dimensional world, and the way out is a craft you fabricate from raw geometry. Mine the ground for dots, spend them at the bench — a square is hull, a triangle is a nozzle, a line is plumbing — then fly the thing you built out of the atmosphere. Nothing in it is a sprite: every object is a primitive, and the sky, the light and the glow on all of them come from one number, how much air is left above you.",
+    "features": [
+      "A Box2D physics sandbox, from the first dig to the burn",
+      "Assemble a craft cell by cell, then find out what you got wrong",
+      "Round worlds — walk far enough and you come back to your own shaft",
+      "One continuous ascent: bright day at the surface, glowing lines in the void"
+    ],
+    "teaser": {
+      "rule": "Shape is form. Colour is function.",
+      "note": "The whole game is four objects — point, line, triangle, square — and what a part does comes from what it is made of, so a red triangle is a nozzle and a blue square is a battery. New mechanics arrive as new materials rather than as new art. In development; no release date yet.",
+      "alt": "A stick figure on a curving horizon, ore glowing under the ground, and a rocket built from squares and triangles climbing into a starfield.",
+      "vocabulary": [
+        { "shape": "Point", "role": "raw ore" },
+        { "shape": "Line", "role": "strut, fuel line, wire" },
+        { "shape": "Triangle", "role": "fin, nozzle, capacitor" },
+        { "shape": "Square", "role": "hull, tank, battery" }
+      ]
+    }
   },
   "footer": {
     "blurb": "Independent developer building small, focused apps and games for Android.",

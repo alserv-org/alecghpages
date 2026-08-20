@@ -53,13 +53,34 @@
   },
   "pixelwrangler": {
     "tagline": "Tapez vite. Gravissez la montagne.",
-    "description": "Un roguelite d'arcade où il faut extraire des créatures-cubes d'un flux déstabilisé avant qu'il ne vous submerge. Cinquante vagues, des cartes d'amélioration à repêcher au fil de l'ascension, et une économie d'éclats qui reporte votre progression d'une partie à l'autre.",
+    "description": "Le flux est brisé et des pixels sauvages jaillissent de la faille. Attrapez-les d'une tape avant qu'ils ne s'échappent, esquivez ce qui se cache dans la tempête et gravissez une montagne de 50 vagues de plus en plus déchaînée. Chaque partie est une construction — et même celles qui tournent mal rapportent.",
     "features": [
-      "Une ascension de 50 vagues avec points de contrôle",
-      "Cartes d'amélioration repêchées entre les vagues",
-      "Économie d'éclats et arbre d'avantages persistant",
-      "Direction artistique cartoon en cel-shading"
+      "Une ascension de 50 vagues, avec un point de contrôle aux dix",
+      "Une carte d'amélioration sur trois repêchée après chaque vague",
+      "Des éclats à chaque partie, dépensés dans un arbre de 16 avantages",
+      "Cinq actes thématiques, du laboratoire à la dimension glitch"
     ]
+  },
+  "oretoorbit": {
+    "tagline": "Minez un monde plat. Bâtissez une fusée en formes. Partez.",
+    "description": "Vous êtes coincé dans un monde plat, en deux dimensions, et la sortie est un engin que vous fabriquez à partir de géométrie brute. Minez le sol pour des points, dépensez-les à l'établi — un carré fait la coque, un triangle la tuyère, une ligne la plomberie — puis pilotez votre engin hors de l'atmosphère. Rien ici n'est un sprite : chaque objet est une primitive, et le ciel, la lumière et la lueur qui s'y posent découlent tous d'un seul nombre, la quantité d'air qu'il vous reste au-dessus de la tête.",
+    "features": [
+      "Un bac à sable physique sur Box2D, du premier coup de foreuse à la mise à feu",
+      "Assemblez un engin case par case, puis découvrez ce que vous avez mal calculé",
+      "Des mondes ronds — marchez assez loin et vous retombez sur votre propre puits",
+      "Une seule ascension continue : plein jour au sol, lignes lumineuses dans le vide"
+    ],
+    "teaser": {
+      "rule": "La forme fait l'objet. La couleur fait la fonction.",
+      "note": "Le jeu entier tient en quatre objets — point, ligne, triangle, carré — et le rôle d'une pièce vient de sa matière : un triangle rouge est une tuyère, un carré bleu une batterie. Les nouvelles mécaniques arrivent sous forme de matières, pas d'illustrations. En développement; aucune date de sortie.",
+      "alt": "Un bonhomme allumette sur un horizon courbe, du minerai qui luit sous le sol et une fusée faite de carrés et de triangles qui grimpe vers les étoiles.",
+      "vocabulary": [
+        { "shape": "Point", "role": "minerai brut" },
+        { "shape": "Ligne", "role": "entretoise, conduite, fil" },
+        { "shape": "Triangle", "role": "aileron, tuyère, condensateur" },
+        { "shape": "Carré", "role": "coque, réservoir, batterie" }
+      ]
+    }
   },
   "footer": {
     "blurb": "Développeur indépendant créant de petites applications et de petits jeux pour Android.",

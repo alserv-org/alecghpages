@@ -62,6 +62,13 @@ const ProjectPage = () => {
         </section>
       )}
 
+      {/* Stands in for the gallery while a product has nothing to screenshot. */}
+      {project.teaser && (
+        <section className="project-section">
+          <project.teaser />
+        </section>
+      )}
+
       {project.playUrl && (
         <section className="project-section">
           <a
@@ -119,14 +126,17 @@ const ProjectPage = () => {
         <Link to="/" className="btn-text">
           <ArrowLeft size={16} /> {t('project.back')}
         </Link>
-        <a
-          href={project.privacyUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="btn-text"
-        >
-          <Shield size={16} /> {t('project.privacyPolicy')}
-        </a>
+        {/* Null until a product ships and there is a policy to serve. */}
+        {project.privacyUrl && (
+          <a
+            href={project.privacyUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-text"
+          >
+            <Shield size={16} /> {t('project.privacyPolicy')}
+          </a>
+        )}
       </footer>
     </article>
   );

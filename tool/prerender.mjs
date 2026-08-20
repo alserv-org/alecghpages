@@ -37,7 +37,13 @@ const routes = [
     path: 'pixel-wrangler',
     title: 'Pixel Wrangler — tap fast, climb the mountain',
     description:
-      'An arcade roguelite: wrangle cube-creatures out of a destabilised feed across a 50-wave mountain, drafting upgrade cards as you climb.',
+      'An arcade roguelite: tap wild pixels out of a broken feed across a 50-wave mountain, drafting upgrade cards as you climb. Out now on Google Play.',
+  },
+  {
+    path: 'ore-to-orbit',
+    title: 'Ore to Orbit — mine a flat world, build a rocket out of shapes',
+    description:
+      'A 2D physics sandbox for Android, in development. Everything is a point, line, triangle or square, and colour decides what a shape does.',
   },
   // Pre-rename URL. The app redirects it to /pixel-wrangler client-side; this
   // file just stops it 404ing before the redirect can run.
@@ -94,14 +100,47 @@ for (const route of routes) {
 await writeFile(join(outDir, '404.html'), shell);
 console.log('prerendered 404.html');
 
-// Guard against a route being added to the app but not to this file.
-const privacyPolicies = (await readdir(join(root, 'public'))).filter((f) =>
-  f.startsWith('privacy-policy-'),
+/*
+ * Every product with a Play listing needs a policy that resolves — Play
+ * rejects a URL that 404s. Unreleased products have no listing and so are
+ * listed here with `null` rather than being left out, which is what keeps
+ * this from silently passing when a shipped product loses its policy.
+ */
+const policies = {
+  listkeeper: 'privacy-policy-listkeeper-en.html',
+  'what-are-the-odds': 'privacy-policy-whataretheodds-en.html',
+  'pixel-wrangler': 'privacy-policy-pixelwrangler-en.html',
+  'ore-to-orbit': null,
+};
+
+const onDisk = new Set(
+  (await readdir(join(root, 'public'))).filter((f) =>
+    f.startsWith('privacy-policy-'),
+  ),
 );
-if (privacyPolicies.length !== 3) {
+const expected = Object.values(policies).filter(Boolean);
+
+const missing = expected.filter((f) => !onDisk.has(f));
+const stray = [...onDisk].filter((f) => !expected.includes(f));
+if (missing.length || stray.length) {
+  if (missing.length) {
+    console.error(`Missing privacy policies in public/: ${missing.join(', ')}`);
+  }
+  if (stray.length) {
+    console.error(
+      `Privacy policies in public/ that no product claims: ${stray.join(', ')}`,
+    );
+  }
+  process.exit(1);
+}
+
+// Guard against a route being added to the app but not to this file.
+const declared = routes.map((r) => r.path).filter((p) => p !== 'pixelfarm');
+const undeclared = Object.keys(policies).filter((p) => !declared.includes(p));
+if (undeclared.length) {
   console.error(
-    `Expected 3 privacy policies in public/, found ${privacyPolicies.length}. ` +
-      'Every product needs one — Play rejects a policy URL that 404s.',
+    `Products with no prerendered route: ${undeclared.join(', ')}. ` +
+      'Add one above, or GitHub Pages 404s the URL React Router knows.',
   );
   process.exit(1);
 }

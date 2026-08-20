@@ -1,3 +1,85 @@
+/* Teaser for an unreleased product — see OreToOrbitTeaser.tsx. */
+
+.oto-teaser {
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: var(--surface);
+  box-shadow: var(--shadow-md);
+}
+
+.oto-scene {
+  display: block;
+  width: 100%;
+  height: auto;
+  /* Below ~600px the scene's own 3:1 would leave a strip too short to read
+     anything in, so it holds this height and crops from the sides instead
+     (preserveAspectRatio="slice"). The launch site and the craft both sit
+     inside the band that survives the crop. */
+  min-height: 200px;
+  /* The scene carries its own sky, so it must not pick up the page ground. */
+  background: #04060c;
+  border-bottom: 1px solid var(--line);
+}
+
+.oto-caption {
+  padding: 1.25rem 1.4rem 1.4rem;
+}
+
+.oto-rule {
+  font-size: 1.05rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--text);
+}
+
+.oto-vocab {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0.9rem 0 1rem;
+}
+
+.oto-vocab li {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.3rem 0.7rem 0.3rem 0.5rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--bg-elevated);
+  font-size: 0.82rem;
+  line-height: 1.4;
+}
+
+.oto-vocab svg {
+  flex-shrink: 0;
+}
+
+.oto-vocab b {
+  font-weight: 600;
+  color: var(--text);
+}
+
+.oto-vocab span {
+  color: var(--text-muted);
+}
+
+.oto-note {
+  font-size: 0.92rem;
+  color: var(--text-muted);
+  max-width: 62ch;
+}
+
+@media (max-width: 720px) {
+  .oto-caption {
+    padding: 1rem 1.1rem 1.2rem;
+  }
+
+  .oto-vocab {
+    gap: 0.4rem;
+  }
+}
 .footer {
   margin-top: auto;
   border-top: 1px solid var(--line);
@@ -117,6 +199,7 @@
   --accent-listkeeper: #34d399;
   --accent-pixelwrangler: #22d3ee;
   --accent-whataretheodds: #fbbf24;
+  --accent-oretoorbit: #fb923c;
   --accent: var(--brand-1);
 
   /* Status pills */
@@ -159,6 +242,7 @@
   --accent-listkeeper: #059669;
   --accent-pixelwrangler: #0891b2;
   --accent-whataretheodds: #b45309;
+  --accent-oretoorbit: #c2410c;
 
   --status-live: #059669;
   --status-soon: #b45309;
@@ -740,15 +824,21 @@ p {
 
 .screenshot-row {
   display: flex;
+  align-items: center;
   gap: 1rem;
   overflow-x: auto;
   padding-bottom: 0.5rem;
   scrollbar-width: thin;
 }
 
+/* Two caps rather than a fixed height: a portrait phone shot is limited by
+   its height, a landscape capture by its width, so a couple of either kind
+   fit on screen at once. Both dimensions stay auto, so nothing distorts. */
 .screenshot-row img {
-  height: 340px;
+  height: auto;
   width: auto;
+  max-height: 340px;
+  max-width: 440px;
   flex-shrink: 0;
   border-radius: var(--radius-lg);
   border: 1px solid var(--line);
@@ -757,7 +847,8 @@ p {
 
 @media (max-width: 720px) {
   .screenshot-row img {
-    height: 260px;
+    max-height: 260px;
+    max-width: 78vw;
   }
 }
 

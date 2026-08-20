@@ -9146,7 +9146,8 @@ const status$1 = { "live": "On Google Play", "soon": "Coming soon", "dev": "In d
 const project$1 = { "about": "About", "features": "Highlights", "details": "Details", "platform": "Platform", "engine": "Built with", "status": "Status", "back": "All projects", "privacyPolicy": "Privacy policy", "getItOnGooglePlay": "Get it on Google Play", "joinClosedTesting": "Not public yet — tap to join closed testing on Google Play" };
 const listkeeper$1 = { "tagline": "Simple lists, done right.", "description": "Most list apps grow until they need a tutorial. ListKeeper goes the other way: a fast, clean place to keep your lists, with nothing bolted on that you'll never open. Make a list, check things off, get on with your day.", "features": ["Clean, uncluttered interface", "Fast and lightweight", "Works entirely offline", "Optional Premium upgrade"] };
 const whataretheodds$1 = { "tagline": "Beat the odds. Climb the ladder.", "description": "Start at 1 in 10. Guess the number and 1 in 20 unlocks. Keep going and the ladder runs all the way to 1 in 10,000 — then to Custom odds, where you pick your own impossible number. Most attempts fail. That's the game.", "features": ["Eleven tiers from 1 in 10 to Custom odds", "Global leaderboards via Play Games", "Attempts refill over time, even while closed", "Achievements and friend comparisons"] };
-const pixelwrangler$1 = { "tagline": "Tap fast. Climb the mountain.", "description": "An arcade roguelite about wrangling cube-creatures out of a destabilised feed before it overwhelms you. Fifty waves, a deck of upgrade cards drafted as you climb, and a shard economy that carries progress between runs.", "features": ["A 50-wave run with checkpoints", "Upgrade cards drafted between waves", "Shard economy and a persistent perk tree", "Bold cel-shaded cartoon art"] };
+const pixelwrangler$1 = { "tagline": "Tap fast. Climb the mountain.", "description": "The feed is broken and wild pixels are pouring out of the glitch. Tap them out of the air before they escape, dodge what's hiding in the storm, and climb one 50-wave mountain that keeps getting wilder. Every run is a build — and a run that ends badly still pays out.", "features": ["A 50-wave run with a checkpoint every ten", "One of three upgrade cards drafted after every wave", "Shards from every run, spent on a 16-perk tree", "Five themed acts, from the lab to the glitch dimension"] };
+const oretoorbit$1 = { "tagline": "Mine a flat world. Build a rocket out of shapes. Leave.", "description": "You're stuck in a flat, two-dimensional world, and the way out is a craft you fabricate from raw geometry. Mine the ground for dots, spend them at the bench — a square is hull, a triangle is a nozzle, a line is plumbing — then fly the thing you built out of the atmosphere. Nothing in it is a sprite: every object is a primitive, and the sky, the light and the glow on all of them come from one number, how much air is left above you.", "features": ["A Box2D physics sandbox, from the first dig to the burn", "Assemble a craft cell by cell, then find out what you got wrong", "Round worlds — walk far enough and you come back to your own shaft", "One continuous ascent: bright day at the surface, glowing lines in the void"], "teaser": { "rule": "Shape is form. Colour is function.", "note": "The whole game is four objects — point, line, triangle, square — and what a part does comes from what it is made of, so a red triangle is a nozzle and a blue square is a battery. New mechanics arrive as new materials rather than as new art. In development; no release date yet.", "alt": "A stick figure on a curving horizon, ore glowing under the ground, and a rocket built from squares and triangles climbing into a starfield.", "vocabulary": [{ "shape": "Point", "role": "raw ore" }, { "shape": "Line", "role": "strut, fuel line, wire" }, { "shape": "Triangle", "role": "fin, nozzle, capacitor" }, { "shape": "Square", "role": "hull, tank, battery" }] } };
 const footer$1 = { "blurb": "Independent developer building small, focused apps and games for Android.", "projects": "Projects", "elsewhere": "Elsewhere", "privacyNote": "Privacy policies are linked from each project page." };
 const notFound$1 = { "message": "That page doesn't exist — it may have been renamed or moved.", "back": "Back home" };
 const enTranslations = {
@@ -9157,6 +9158,7 @@ const enTranslations = {
   listkeeper: listkeeper$1,
   whataretheodds: whataretheodds$1,
   pixelwrangler: pixelwrangler$1,
+  oretoorbit: oretoorbit$1,
   footer: footer$1,
   notFound: notFound$1
 };
@@ -9166,7 +9168,8 @@ const status = { "live": "Sur Google Play", "soon": "Bientôt disponible", "dev"
 const project = { "about": "À propos", "features": "Points saillants", "details": "Détails", "platform": "Plateforme", "engine": "Conçu avec", "status": "État", "back": "Tous les projets", "privacyPolicy": "Politique de confidentialité", "getItOnGooglePlay": "Disponible sur Google Play", "joinClosedTesting": "Pas encore public — touchez pour rejoindre les essais fermés sur Google Play" };
 const listkeeper = { "tagline": "Des listes simples, bien faites.", "description": "La plupart des applications de listes grossissent jusqu'à exiger un tutoriel. ListKeeper fait l'inverse : un endroit rapide et épuré pour vos listes, sans fonctions superflues que vous n'ouvrirez jamais. Créez une liste, cochez, passez à autre chose.", "features": ["Interface claire et dépouillée", "Rapide et léger", "Fonctionne entièrement hors ligne", "Version Premium optionnelle"] };
 const whataretheodds = { "tagline": "Défiez les probabilités. Grimpez l'échelle.", "description": "Commencez à 1 sur 10. Devinez le nombre et le palier 1 sur 20 se débloque. Continuez et l'échelle monte jusqu'à 1 sur 10 000 — puis jusqu'aux cotes personnalisées, où vous choisissez votre propre nombre impossible. La plupart des tentatives échouent. C'est le principe du jeu.", "features": ["Onze paliers, de 1 sur 10 aux cotes personnalisées", "Classements mondiaux via Play Games", "Les tentatives se rechargent avec le temps, même hors ligne", "Succès et comparaisons entre amis"] };
-const pixelwrangler = { "tagline": "Tapez vite. Gravissez la montagne.", "description": "Un roguelite d'arcade où il faut extraire des créatures-cubes d'un flux déstabilisé avant qu'il ne vous submerge. Cinquante vagues, des cartes d'amélioration à repêcher au fil de l'ascension, et une économie d'éclats qui reporte votre progression d'une partie à l'autre.", "features": ["Une ascension de 50 vagues avec points de contrôle", "Cartes d'amélioration repêchées entre les vagues", "Économie d'éclats et arbre d'avantages persistant", "Direction artistique cartoon en cel-shading"] };
+const pixelwrangler = { "tagline": "Tapez vite. Gravissez la montagne.", "description": "Le flux est brisé et des pixels sauvages jaillissent de la faille. Attrapez-les d'une tape avant qu'ils ne s'échappent, esquivez ce qui se cache dans la tempête et gravissez une montagne de 50 vagues de plus en plus déchaînée. Chaque partie est une construction — et même celles qui tournent mal rapportent.", "features": ["Une ascension de 50 vagues, avec un point de contrôle aux dix", "Une carte d'amélioration sur trois repêchée après chaque vague", "Des éclats à chaque partie, dépensés dans un arbre de 16 avantages", "Cinq actes thématiques, du laboratoire à la dimension glitch"] };
+const oretoorbit = { "tagline": "Minez un monde plat. Bâtissez une fusée en formes. Partez.", "description": "Vous êtes coincé dans un monde plat, en deux dimensions, et la sortie est un engin que vous fabriquez à partir de géométrie brute. Minez le sol pour des points, dépensez-les à l'établi — un carré fait la coque, un triangle la tuyère, une ligne la plomberie — puis pilotez votre engin hors de l'atmosphère. Rien ici n'est un sprite : chaque objet est une primitive, et le ciel, la lumière et la lueur qui s'y posent découlent tous d'un seul nombre, la quantité d'air qu'il vous reste au-dessus de la tête.", "features": ["Un bac à sable physique sur Box2D, du premier coup de foreuse à la mise à feu", "Assemblez un engin case par case, puis découvrez ce que vous avez mal calculé", "Des mondes ronds — marchez assez loin et vous retombez sur votre propre puits", "Une seule ascension continue : plein jour au sol, lignes lumineuses dans le vide"], "teaser": { "rule": "La forme fait l'objet. La couleur fait la fonction.", "note": "Le jeu entier tient en quatre objets — point, ligne, triangle, carré — et le rôle d'une pièce vient de sa matière : un triangle rouge est une tuyère, un carré bleu une batterie. Les nouvelles mécaniques arrivent sous forme de matières, pas d'illustrations. En développement; aucune date de sortie.", "alt": "Un bonhomme allumette sur un horizon courbe, du minerai qui luit sous le sol et une fusée faite de carrés et de triangles qui grimpe vers les étoiles.", "vocabulary": [{ "shape": "Point", "role": "minerai brut" }, { "shape": "Ligne", "role": "entretoise, conduite, fil" }, { "shape": "Triangle", "role": "aileron, tuyère, condensateur" }, { "shape": "Carré", "role": "coque, réservoir, batterie" }] } };
 const footer = { "blurb": "Développeur indépendant créant de petites applications et de petits jeux pour Android.", "projects": "Projets", "elsewhere": "Ailleurs", "privacyNote": "Les politiques de confidentialité sont liées depuis chaque page de projet." };
 const notFound = { "message": "Cette page n'existe pas — elle a peut-être été renommée ou déplacée.", "back": "Retour à l'accueil" };
 const frCATranslations = {
@@ -9177,6 +9180,7 @@ const frCATranslations = {
   listkeeper,
   whataretheodds,
   pixelwrangler,
+  oretoorbit,
   footer,
   notFound
 };
@@ -9359,11 +9363,22 @@ const createLucideIcon = (iconName, iconNode) => {
  * This source code is licensed under the ISC license.
  * See the LICENSE file in the root directory of this source tree.
  */
-const __iconNode$d = [
+const __iconNode$e = [
   ["path", { d: "m12 19-7-7 7-7", key: "1l729n" }],
   ["path", { d: "M19 12H5", key: "x3x0zl" }]
 ];
-const ArrowLeft = createLucideIcon("arrow-left", __iconNode$d);
+const ArrowLeft = createLucideIcon("arrow-left", __iconNode$e);
+/**
+ * @license lucide-react v0.535.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */
+const __iconNode$d = [
+  ["path", { d: "M5 12h14", key: "1ays0h" }],
+  ["path", { d: "m12 5 7 7-7 7", key: "xquz4c" }]
+];
+const ArrowRight = createLucideIcon("arrow-right", __iconNode$d);
 /**
  * @license lucide-react v0.535.0 - ISC
  *
@@ -9371,17 +9386,6 @@ const ArrowLeft = createLucideIcon("arrow-left", __iconNode$d);
  * See the LICENSE file in the root directory of this source tree.
  */
 const __iconNode$c = [
-  ["path", { d: "M5 12h14", key: "1ays0h" }],
-  ["path", { d: "m12 5 7 7-7 7", key: "xquz4c" }]
-];
-const ArrowRight = createLucideIcon("arrow-right", __iconNode$c);
-/**
- * @license lucide-react v0.535.0 - ISC
- *
- * This source code is licensed under the ISC license.
- * See the LICENSE file in the root directory of this source tree.
- */
-const __iconNode$b = [
   [
     "path",
     {
@@ -9413,22 +9417,22 @@ const __iconNode$b = [
   ["path", { d: "m12 8 4.74-2.85", key: "3rx089" }],
   ["path", { d: "M12 13.5V8", key: "1io7kd" }]
 ];
-const Boxes = createLucideIcon("boxes", __iconNode$b);
+const Boxes = createLucideIcon("boxes", __iconNode$c);
 /**
  * @license lucide-react v0.535.0 - ISC
  *
  * This source code is licensed under the ISC license.
  * See the LICENSE file in the root directory of this source tree.
  */
-const __iconNode$a = [["path", { d: "M20 6 9 17l-5-5", key: "1gmf2c" }]];
-const Check = createLucideIcon("check", __iconNode$a);
+const __iconNode$b = [["path", { d: "M20 6 9 17l-5-5", key: "1gmf2c" }]];
+const Check = createLucideIcon("check", __iconNode$b);
 /**
  * @license lucide-react v0.535.0 - ISC
  *
  * This source code is licensed under the ISC license.
  * See the LICENSE file in the root directory of this source tree.
  */
-const __iconNode$9 = [
+const __iconNode$a = [
   ["path", { d: "M10 2v2", key: "7u0qdc" }],
   ["path", { d: "M14 2v2", key: "6buw04" }],
   [
@@ -9440,14 +9444,14 @@ const __iconNode$9 = [
   ],
   ["path", { d: "M6 2v2", key: "colzsn" }]
 ];
-const Coffee = createLucideIcon("coffee", __iconNode$9);
+const Coffee = createLucideIcon("coffee", __iconNode$a);
 /**
  * @license lucide-react v0.535.0 - ISC
  *
  * This source code is licensed under the ISC license.
  * See the LICENSE file in the root directory of this source tree.
  */
-const __iconNode$8 = [
+const __iconNode$9 = [
   ["rect", { width: "12", height: "12", x: "2", y: "10", rx: "2", ry: "2", key: "6agr2n" }],
   [
     "path",
@@ -9458,14 +9462,14 @@ const __iconNode$8 = [
   ["path", { d: "M15 6h.01", key: "cblpky" }],
   ["path", { d: "M18 9h.01", key: "2061c0" }]
 ];
-const Dices = createLucideIcon("dices", __iconNode$8);
+const Dices = createLucideIcon("dices", __iconNode$9);
 /**
  * @license lucide-react v0.535.0 - ISC
  *
  * This source code is licensed under the ISC license.
  * See the LICENSE file in the root directory of this source tree.
  */
-const __iconNode$7 = [
+const __iconNode$8 = [
   [
     "path",
     {
@@ -9475,7 +9479,19 @@ const __iconNode$7 = [
   ],
   ["path", { d: "M9 18c-4.51 2-5-2-7-2", key: "9comsn" }]
 ];
-const Github = createLucideIcon("github", __iconNode$7);
+const Github = createLucideIcon("github", __iconNode$8);
+/**
+ * @license lucide-react v0.535.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */
+const __iconNode$7 = [
+  ["circle", { cx: "12", cy: "12", r: "10", key: "1mglay" }],
+  ["path", { d: "M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20", key: "13o1zl" }],
+  ["path", { d: "M2 12h20", key: "9i4pu4" }]
+];
+const Globe = createLucideIcon("globe", __iconNode$7);
 /**
  * @license lucide-react v0.535.0 - ISC
  *
@@ -9483,11 +9499,13 @@ const Github = createLucideIcon("github", __iconNode$7);
  * See the LICENSE file in the root directory of this source tree.
  */
 const __iconNode$6 = [
-  ["circle", { cx: "12", cy: "12", r: "10", key: "1mglay" }],
-  ["path", { d: "M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20", key: "13o1zl" }],
-  ["path", { d: "M2 12h20", key: "9i4pu4" }]
+  ["path", { d: "m3 17 2 2 4-4", key: "1jhpwq" }],
+  ["path", { d: "m3 7 2 2 4-4", key: "1obspn" }],
+  ["path", { d: "M13 6h8", key: "15sg57" }],
+  ["path", { d: "M13 12h8", key: "h98zly" }],
+  ["path", { d: "M13 18h8", key: "oe0vm4" }]
 ];
-const Globe = createLucideIcon("globe", __iconNode$6);
+const ListChecks = createLucideIcon("list-checks", __iconNode$6);
 /**
  * @license lucide-react v0.535.0 - ISC
  *
@@ -9495,13 +9513,11 @@ const Globe = createLucideIcon("globe", __iconNode$6);
  * See the LICENSE file in the root directory of this source tree.
  */
 const __iconNode$5 = [
-  ["path", { d: "m3 17 2 2 4-4", key: "1jhpwq" }],
-  ["path", { d: "m3 7 2 2 4-4", key: "1obspn" }],
-  ["path", { d: "M13 6h8", key: "15sg57" }],
-  ["path", { d: "M13 12h8", key: "h98zly" }],
-  ["path", { d: "M13 18h8", key: "oe0vm4" }]
+  ["path", { d: "M4 12h16", key: "1lakjw" }],
+  ["path", { d: "M4 18h16", key: "19g7jn" }],
+  ["path", { d: "M4 6h16", key: "1o0s65" }]
 ];
-const ListChecks = createLucideIcon("list-checks", __iconNode$5);
+const Menu = createLucideIcon("menu", __iconNode$5);
 /**
  * @license lucide-react v0.535.0 - ISC
  *
@@ -9509,11 +9525,15 @@ const ListChecks = createLucideIcon("list-checks", __iconNode$5);
  * See the LICENSE file in the root directory of this source tree.
  */
 const __iconNode$4 = [
-  ["path", { d: "M4 12h16", key: "1lakjw" }],
-  ["path", { d: "M4 18h16", key: "19g7jn" }],
-  ["path", { d: "M4 6h16", key: "1o0s65" }]
+  [
+    "path",
+    {
+      d: "M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401",
+      key: "kfwtm"
+    }
+  ]
 ];
-const Menu = createLucideIcon("menu", __iconNode$4);
+const Moon = createLucideIcon("moon", __iconNode$4);
 /**
  * @license lucide-react v0.535.0 - ISC
  *
@@ -9524,12 +9544,21 @@ const __iconNode$3 = [
   [
     "path",
     {
-      d: "M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401",
-      key: "kfwtm"
+      d: "M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z",
+      key: "m3kijz"
     }
-  ]
+  ],
+  [
+    "path",
+    {
+      d: "m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z",
+      key: "1fmvmk"
+    }
+  ],
+  ["path", { d: "M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0", key: "1f8sc4" }],
+  ["path", { d: "M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5", key: "qeys4" }]
 ];
-const Moon = createLucideIcon("moon", __iconNode$3);
+const Rocket = createLucideIcon("rocket", __iconNode$3);
 /**
  * @license lucide-react v0.535.0 - ISC
  *
@@ -9575,6 +9604,144 @@ const __iconNode = [
   ["path", { d: "m6 6 12 12", key: "d8bk6v" }]
 ];
 const X = createLucideIcon("x", __iconNode);
+const STARS = [
+  [210, 72, 0.9, 0.16],
+  [300, 30, 1.2, 0.24],
+  [372, 96, 0.8, 0.2],
+  [430, 124, 0.7, 0.18],
+  [455, 44, 1.1, 0.34],
+  [520, 110, 0.9, 0.28],
+  [588, 26, 1.3, 0.5],
+  [640, 84, 1, 0.44],
+  [700, 140, 0.9, 0.42],
+  [742, 40, 1.4, 0.68],
+  [800, 104, 1.1, 0.66],
+  [848, 60, 0.9, 0.6],
+  [880, 152, 1.2, 0.75],
+  [916, 32, 1.5, 0.85],
+  [660, 190, 0.8, 0.45],
+  [790, 182, 1, 0.58],
+  [905, 224, 1, 0.66],
+  [560, 62, 0.8, 0.36]
+];
+const ORE = [
+  [240, 286, 3, "#ff6b5e"],
+  [266, 301, 2.4, "#ff6b5e"],
+  [356, 274, 3, "#63b3ff"],
+  [378, 289, 2.2, "#63b3ff"],
+  [452, 292, 2.4, "#ff6b5e"],
+  [620, 274, 3, "#ff6b5e"],
+  [706, 298, 2.6, "#63b3ff"]
+];
+const GLYPHS = [
+  /* @__PURE__ */ jsxRuntimeExports.jsx("circle", { cx: "9", cy: "9", r: "3.6", fill: "#e8edf7" }),
+  /* @__PURE__ */ jsxRuntimeExports.jsx("line", { x1: "2.5", y1: "15", x2: "15.5", y2: "3", stroke: "#e8edf7", strokeWidth: "3", strokeLinecap: "round" }),
+  /* @__PURE__ */ jsxRuntimeExports.jsx("polygon", { points: "9,2.5 16,15.5 2,15.5", fill: "#ff6b5e" }),
+  /* @__PURE__ */ jsxRuntimeExports.jsx("rect", { x: "3", y: "3", width: "12", height: "12", rx: "1.5", fill: "#63b3ff" })
+];
+const OreToOrbitTeaser = () => {
+  const { t } = useTranslation();
+  const vocabulary = t("oretoorbit.teaser.vocabulary");
+  return /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "oto-teaser", children: [
+    /* @__PURE__ */ jsxRuntimeExports.jsxs(
+      "svg",
+      {
+        className: "oto-scene",
+        viewBox: "0 0 960 320",
+        preserveAspectRatio: "xMidYMid slice",
+        role: "img",
+        "aria-label": t("oretoorbit.teaser.alt"),
+        children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("defs", { children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsxs("linearGradient", { id: "oto-sky", x1: "0", y1: "1", x2: "1", y2: "0", children: [
+              /* @__PURE__ */ jsxRuntimeExports.jsx("stop", { offset: "0%", stopColor: "#ffcf9e" }),
+              /* @__PURE__ */ jsxRuntimeExports.jsx("stop", { offset: "22%", stopColor: "#a5dcf2" }),
+              /* @__PURE__ */ jsxRuntimeExports.jsx("stop", { offset: "48%", stopColor: "#3f7fb5" }),
+              /* @__PURE__ */ jsxRuntimeExports.jsx("stop", { offset: "74%", stopColor: "#16294a" }),
+              /* @__PURE__ */ jsxRuntimeExports.jsx("stop", { offset: "100%", stopColor: "#04060c" })
+            ] }),
+            /* @__PURE__ */ jsxRuntimeExports.jsxs("linearGradient", { id: "oto-ground", gradientUnits: "userSpaceOnUse", x1: "0", y1: "236", x2: "0", y2: "330", children: [
+              /* @__PURE__ */ jsxRuntimeExports.jsx("stop", { offset: "0%", stopColor: "#57424b" }),
+              /* @__PURE__ */ jsxRuntimeExports.jsx("stop", { offset: "100%", stopColor: "#191320" })
+            ] }),
+            /* @__PURE__ */ jsxRuntimeExports.jsxs("linearGradient", { id: "oto-flame", x1: "0", y1: "0", x2: "0", y2: "1", children: [
+              /* @__PURE__ */ jsxRuntimeExports.jsx("stop", { offset: "0%", stopColor: "#ffd166" }),
+              /* @__PURE__ */ jsxRuntimeExports.jsx("stop", { offset: "55%", stopColor: "#ff7a3d", stopOpacity: "0.85" }),
+              /* @__PURE__ */ jsxRuntimeExports.jsx("stop", { offset: "100%", stopColor: "#ff4d3d", stopOpacity: "0" })
+            ] }),
+            /* @__PURE__ */ jsxRuntimeExports.jsxs("filter", { id: "oto-glow", x: "-70%", y: "-70%", width: "240%", height: "240%", children: [
+              /* @__PURE__ */ jsxRuntimeExports.jsx("feGaussianBlur", { stdDeviation: "5", result: "blur" }),
+              /* @__PURE__ */ jsxRuntimeExports.jsxs("feMerge", { children: [
+                /* @__PURE__ */ jsxRuntimeExports.jsx("feMergeNode", { in: "blur" }),
+                /* @__PURE__ */ jsxRuntimeExports.jsx("feMergeNode", { in: "SourceGraphic" })
+              ] })
+            ] }),
+            /* @__PURE__ */ jsxRuntimeExports.jsxs("filter", { id: "oto-ore-glow", x: "-140%", y: "-140%", width: "380%", height: "380%", children: [
+              /* @__PURE__ */ jsxRuntimeExports.jsx("feGaussianBlur", { stdDeviation: "2.4", result: "blur" }),
+              /* @__PURE__ */ jsxRuntimeExports.jsxs("feMerge", { children: [
+                /* @__PURE__ */ jsxRuntimeExports.jsx("feMergeNode", { in: "blur" }),
+                /* @__PURE__ */ jsxRuntimeExports.jsx("feMergeNode", { in: "SourceGraphic" })
+              ] })
+            ] })
+          ] }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("rect", { width: "960", height: "320", fill: "url(#oto-sky)" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("g", { fill: "#ffffff", children: STARS.map(([x, y, r, o], i) => /* @__PURE__ */ jsxRuntimeExports.jsx("circle", { cx: x, cy: y, r, opacity: o }, i)) }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("circle", { cx: "430", cy: "2400", r: "2160", fill: "url(#oto-ground)" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx(
+            "path",
+            {
+              d: "M0,283.3 A2160,2160 0 0 1 960,306",
+              fill: "none",
+              stroke: "#f0d9bd",
+              strokeOpacity: "0.45",
+              strokeWidth: "2"
+            }
+          ),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("path", { d: "M278,245 h16 v58 h-16 z", fill: "#0c0810", opacity: "0.55" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("g", { filter: "url(#oto-ore-glow)", children: ORE.map(([x, y, r, fill], i) => /* @__PURE__ */ jsxRuntimeExports.jsx("circle", { cx: x, cy: y, r, fill }, i)) }),
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("g", { stroke: "#241c2e", strokeWidth: "2.2", strokeLinecap: "round", fill: "none", children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsx("circle", { cx: "318", cy: "227", r: "4.2", fill: "#241c2e", stroke: "none" }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx("path", { d: "M318,232 v9 M318,235 l-6,3 M318,235 l6,3 M318,241 l-4,4 M318,241 l4,4" })
+          ] }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx(
+            "path",
+            {
+              d: "M324,236 C 400,198 470,184 566,152",
+              fill: "none",
+              stroke: "#ffffff",
+              strokeOpacity: "0.32",
+              strokeWidth: "2",
+              strokeDasharray: "2 9",
+              strokeLinecap: "round"
+            }
+          ),
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("g", { transform: "translate(624,128) rotate(34)", filter: "url(#oto-glow)", children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsx("polygon", { points: "-7,32 7,32 0,68", fill: "url(#oto-flame)" }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx("polygon", { points: "-3.5,32 3.5,32 0,52", fill: "#fff3c4", opacity: "0.9" }),
+            /* @__PURE__ */ jsxRuntimeExports.jsxs("g", { stroke: "#0d1018", strokeWidth: "1.6", strokeLinejoin: "round", children: [
+              /* @__PURE__ */ jsxRuntimeExports.jsx("polygon", { points: "-10,-4 -10,12 -25,15", fill: "#dfe6f2" }),
+              /* @__PURE__ */ jsxRuntimeExports.jsx("polygon", { points: "10,-4 10,12 25,15", fill: "#dfe6f2" }),
+              /* @__PURE__ */ jsxRuntimeExports.jsx("polygon", { points: "-10,12 10,12 0,33", fill: "#e0362c" }),
+              /* @__PURE__ */ jsxRuntimeExports.jsx("rect", { x: "-10", y: "-8", width: "20", height: "20", fill: "#f04438" }),
+              /* @__PURE__ */ jsxRuntimeExports.jsx("rect", { x: "-10", y: "-28", width: "20", height: "20", fill: "#eef2fa" }),
+              /* @__PURE__ */ jsxRuntimeExports.jsx("polygon", { points: "-10,-28 10,-28 0,-47", fill: "#eef2fa" }),
+              /* @__PURE__ */ jsxRuntimeExports.jsx("rect", { x: "-5", y: "-24", width: "10", height: "10", fill: "#4f9df5" })
+            ] })
+          ] })
+        ]
+      }
+    ),
+    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "oto-caption", children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "oto-rule", children: t("oretoorbit.teaser.rule") }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("ul", { className: "oto-vocab", children: Array.isArray(vocabulary) && vocabulary.map((entry, i) => /* @__PURE__ */ jsxRuntimeExports.jsxs("li", { children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx("svg", { viewBox: "0 0 18 18", width: "18", height: "18", "aria-hidden": "true", children: GLYPHS[i] }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("b", { children: entry.shape }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("span", { children: entry.role })
+      ] }, entry.shape)) }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "oto-note", children: t("oretoorbit.teaser.note") })
+    ] })
+  ] });
+};
 const projects = [
   {
     id: "listkeeper",
@@ -9594,17 +9761,18 @@ const projects = [
     slug: "what-are-the-odds",
     title: "What Are The Odds",
     icon: Dices,
-    status: "soon",
+    status: "live",
     accentVar: "--accent-whataretheodds",
     platform: "Android",
     engine: "LibGDX",
-    playUrl: "https://play.google.com/apps/testing/org.alserv.whataretheodds",
+    playUrl: "https://play.google.com/store/apps/details?id=org.alserv.whataretheodds",
     privacyUrl: "/privacy-policy-whataretheodds-en.html",
     logoSrc: "/logos/what-are-the-odds.png",
     screenshots: [
       "/screenshots/what-are-the-odds/1-menu.png",
       "/screenshots/what-are-the-odds/2-gameplay.png",
-      "/screenshots/what-are-the-odds/3-result.png"
+      "/screenshots/what-are-the-odds/3-result.png",
+      "/screenshots/what-are-the-odds/4-leaderboard.png"
     ]
   },
   {
@@ -9612,12 +9780,33 @@ const projects = [
     slug: "pixel-wrangler",
     title: "Pixel Wrangler",
     icon: Boxes,
-    status: "dev",
+    status: "live",
     accentVar: "--accent-pixelwrangler",
     platform: "Android",
     engine: "LibGDX",
+    playUrl: "https://play.google.com/store/apps/details?id=org.alserv.pixelwrangler",
+    privacyUrl: "/privacy-policy-pixelwrangler-en.html",
+    logoSrc: "/logos/pixel-wrangler.png",
+    screenshots: [
+      "/screenshots/pixel-wrangler/01-main-menu.webp",
+      "/screenshots/pixel-wrangler/02-the-storm.webp",
+      "/screenshots/pixel-wrangler/03-draft.webp",
+      "/screenshots/pixel-wrangler/04-run-over.webp",
+      "/screenshots/pixel-wrangler/05-upgrades.webp"
+    ]
+  },
+  {
+    id: "oretoorbit",
+    slug: "ore-to-orbit",
+    title: "Ore to Orbit",
+    icon: Rocket,
+    status: "soon",
+    accentVar: "--accent-oretoorbit",
+    platform: "Android",
+    engine: "LibGDX + Box2D",
     playUrl: null,
-    privacyUrl: "/privacy-policy-pixelwrangler-en.html"
+    privacyUrl: null,
+    teaser: OreToOrbitTeaser
   }
 ];
 const projectBySlug = (slug) => projects.find((p) => p.slug === slug);
@@ -9892,6 +10081,7 @@ const ProjectPage = () => {
           ] })
         ] }),
         project2.screenshots && project2.screenshots.length > 0 && /* @__PURE__ */ jsxRuntimeExports.jsx("section", { className: "project-section screenshot-row", children: project2.screenshots.map((src) => /* @__PURE__ */ jsxRuntimeExports.jsx("img", { src, alt: "", loading: "lazy" }, src)) }),
+        project2.teaser && /* @__PURE__ */ jsxRuntimeExports.jsx("section", { className: "project-section", children: /* @__PURE__ */ jsxRuntimeExports.jsx(project2.teaser, {}) }),
         project2.playUrl && /* @__PURE__ */ jsxRuntimeExports.jsxs("section", { className: "project-section", children: [
           /* @__PURE__ */ jsxRuntimeExports.jsx(
             "a",
@@ -9945,7 +10135,7 @@ const ProjectPage = () => {
             " ",
             t("project.back")
           ] }),
-          /* @__PURE__ */ jsxRuntimeExports.jsxs(
+          project2.privacyUrl && /* @__PURE__ */ jsxRuntimeExports.jsxs(
             "a",
             {
               href: project2.privacyUrl,
