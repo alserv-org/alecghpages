@@ -16,6 +16,7 @@
   },
   "status": {
     "live": "Sur Google Play",
+    "available": "Auto-hébergé",
     "soon": "Bientôt disponible",
     "dev": "En développement"
   },
@@ -29,7 +30,8 @@
     "back": "Tous les projets",
     "privacyPolicy": "Politique de confidentialité",
     "getItOnGooglePlay": "Disponible sur Google Play",
-    "joinClosedTesting": "Pas encore public — touchez pour rejoindre les essais fermés sur Google Play"
+    "joinClosedTesting": "Pas encore public — touchez pour rejoindre les essais fermés sur Google Play",
+    "viewOnGithub": "Voir sur GitHub"
   },
   "listkeeper": {
     "tagline": "Des listes simples, bien faites.",
@@ -91,5 +93,16 @@
   "notFound": {
     "message": "Cette page n'existe pas — elle a peut-être été renommée ou déplacée.",
     "back": "Retour à l'accueil"
+  },
+  "homepool": {
+    "tagline": "Suivez votre piscine. Ne devinez plus quand agir.",
+    "description": "homepool est un suivi de l'entretien de piscine et de spa auto-hébergé : enregistrez vos mesures d'eau et vos traitements, obtenez des plages cibles adaptées à votre désinfectant et des conseils de dosage, et voyez tout depuis un tableau de bord clair — vos données ne quittent jamais votre propre serveur. Une intégration Home Assistant de premier ordre apporte vos relevés et votre calendrier d'entretien dans votre maison intelligente, avec des notifications interactives quand quelque chose est dû.",
+    "features": [
+      "Tableau d'état de l'eau avec plages idéales et conseils de dosage par paramètre",
+      "Calendrier d'entretien configurable — lavage à contre-courant, vérifications de filtre, et tout ce que vous suivez",
+      "Intégration Home Assistant avec une carte Lovelace dédiée",
+      "Notifications interactives qui marquent une tâche comme terminée directement depuis l'alerte",
+      "Auto-hébergé avec une seule commande Docker — vos données restent sur votre propre serveur"
+    ]
   }
 }

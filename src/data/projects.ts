@@ -1,9 +1,11 @@
 import React from 'react';
-import { ListChecks, Boxes, Dices, Rocket, type LucideIcon } from 'lucide-react';
+import { ListChecks, Boxes, Dices, Rocket, Waves, type LucideIcon } from 'lucide-react';
 import OreToOrbitTeaser from '../components/OreToOrbitTeaser';
 
-/** Drives the release badge, and whether a Play link is rendered at all. */
-export type Status = 'live' | 'soon' | 'dev';
+/** Drives the release badge, and whether a Play link is rendered at all.
+ *  'live' specifically means "on Google Play" (see StatusPill's copy);
+ *  'available' is for a shipped, usable project with no Play listing. */
+export type Status = 'live' | 'available' | 'soon' | 'dev';
 
 export interface Project {
   id: string;
@@ -19,6 +21,9 @@ export interface Project {
   /** Play listing — null until there's a real, resolvable URL (a live store
    *  page or a closed-testing opt-in), so we never render a badge that 404s. */
   playUrl: string | null;
+  /** Open-source / self-hosted projects link out to their repo instead of a
+   *  store listing — shown as a GitHub CTA on the project page when set. */
+  githubUrl?: string | null;
   /** Served from this same site out of public/. Null while a product is still
    *  unreleased and has no policy to serve. */
   privacyUrl: string | null;
@@ -96,6 +101,25 @@ export const projects: Project[] = [
     playUrl: null,
     privacyUrl: null,
     teaser: OreToOrbitTeaser,
+  },
+  {
+    id: 'homepool',
+    slug: 'homepool',
+    title: 'homepool',
+    icon: Waves,
+    status: 'available',
+    accentVar: '--accent-homepool',
+    platform: 'Self-hosted (Docker)',
+    engine: 'FastAPI + React',
+    playUrl: null,
+    githubUrl: 'https://github.com/alecc08/homepool',
+    privacyUrl: null,
+    logoSrc: '/logos/homepool.png',
+    screenshots: [
+      '/screenshots/homepool/1-dashboard.png',
+      '/screenshots/homepool/2-maintenance.png',
+      '/screenshots/homepool/3-mobile.png',
+    ],
   },
 ];
 

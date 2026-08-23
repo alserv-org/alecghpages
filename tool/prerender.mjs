@@ -52,6 +52,12 @@ const routes = [
     title: 'Pixel Wrangler — tap fast, climb the mountain',
     description: 'This project is now called Pixel Wrangler.',
   },
+  {
+    path: 'homepool',
+    title: 'homepool — self-hosted pool & spa maintenance tracker',
+    description:
+      'Log water measurements and treatments, get sanitizer-aware target ranges and dosing advice, and bring it all into Home Assistant with actionable maintenance-due notifications. Self-hosted, open source.',
+  },
 ];
 
 const shell = await readFile(join(outDir, 'index.html'), 'utf8');

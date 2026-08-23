@@ -200,6 +200,7 @@
   --accent-pixelwrangler: #22d3ee;
   --accent-whataretheodds: #fbbf24;
   --accent-oretoorbit: #fb923c;
+  --accent-homepool: #38bdf8;
   --accent: var(--brand-1);
 
   /* Status pills */
@@ -243,6 +244,7 @@
   --accent-pixelwrangler: #0891b2;
   --accent-whataretheodds: #b45309;
   --accent-oretoorbit: #c2410c;
+  --accent-homepool: #0369a1;
 
   --status-live: #059669;
   --status-soon: #b45309;
@@ -659,6 +661,9 @@ p {
 .status-live {
   --status-color: var(--status-live);
 }
+.status-available {
+  --status-color: var(--status-live);
+}
 .status-soon {
   --status-color: var(--status-soon);
 }
@@ -673,7 +678,8 @@ p {
   background: currentColor;
 }
 
-.status-live .status-dot {
+.status-live .status-dot,
+.status-available .status-dot {
   animation: pulse 2.4s ease-in-out infinite;
 }
 

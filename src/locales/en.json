@@ -16,6 +16,7 @@
   },
   "status": {
     "live": "On Google Play",
+    "available": "Self-hosted",
     "soon": "Coming soon",
     "dev": "In development"
   },
@@ -29,7 +30,8 @@
     "back": "All projects",
     "privacyPolicy": "Privacy policy",
     "getItOnGooglePlay": "Get it on Google Play",
-    "joinClosedTesting": "Not public yet — tap to join closed testing on Google Play"
+    "joinClosedTesting": "Not public yet — tap to join closed testing on Google Play",
+    "viewOnGithub": "View on GitHub"
   },
   "listkeeper": {
     "tagline": "Simple lists, done right.",
@@ -91,5 +93,16 @@
   "notFound": {
     "message": "That page doesn't exist — it may have been renamed or moved.",
     "back": "Back home"
+  },
+  "homepool": {
+    "tagline": "Track your pool. Never guess when it's due.",
+    "description": "homepool is a self-hosted pool and spa maintenance tracker: log water measurements and treatments, get sanitizer-aware target ranges and dosing advice, and see it all from a clean dashboard — your data never leaves your own server. A first-class Home Assistant integration brings your readings and maintenance schedule into your existing smart home, with actionable push notifications when something's due.",
+    "features": [
+      "Water status board with ideal ranges and dosing advice per parameter",
+      "Configurable maintenance schedule — backwash, filter checks, and anything else you track",
+      "Home Assistant integration with a purpose-built Lovelace card",
+      "Actionable push notifications that mark a task done right from the alert",
+      "Self-hosted with one Docker command — your data stays on your own server"
+    ]
   }
 }

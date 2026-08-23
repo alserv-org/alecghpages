@@ -9142,14 +9142,15 @@ function useViewTransitionState(to, { relative } = {}) {
 }
 const nav$1 = { "home": "Home", "github": "GitHub", "toggleTheme": "Toggle theme", "toggleLanguage": "Toggle language", "toggleMenu": "Toggle menu" };
 const home$1 = { "role": "Independent developer", "greeting": "Hi, I'm", "statement": "I build small, focused apps and games for Android — the kind that do one thing properly and stay out of your way. Everything here is designed, written and shipped solo.", "seeProjects": "See projects", "projects": "Projects", "shipped": "in the works" };
-const status$1 = { "live": "On Google Play", "soon": "Coming soon", "dev": "In development" };
-const project$1 = { "about": "About", "features": "Highlights", "details": "Details", "platform": "Platform", "engine": "Built with", "status": "Status", "back": "All projects", "privacyPolicy": "Privacy policy", "getItOnGooglePlay": "Get it on Google Play", "joinClosedTesting": "Not public yet — tap to join closed testing on Google Play" };
+const status$1 = { "live": "On Google Play", "available": "Self-hosted", "soon": "Coming soon", "dev": "In development" };
+const project$1 = { "about": "About", "features": "Highlights", "details": "Details", "platform": "Platform", "engine": "Built with", "status": "Status", "back": "All projects", "privacyPolicy": "Privacy policy", "getItOnGooglePlay": "Get it on Google Play", "joinClosedTesting": "Not public yet — tap to join closed testing on Google Play", "viewOnGithub": "View on GitHub" };
 const listkeeper$1 = { "tagline": "Simple lists, done right.", "description": "Most list apps grow until they need a tutorial. ListKeeper goes the other way: a fast, clean place to keep your lists, with nothing bolted on that you'll never open. Make a list, check things off, get on with your day.", "features": ["Clean, uncluttered interface", "Fast and lightweight", "Works entirely offline", "Optional Premium upgrade"] };
 const whataretheodds$1 = { "tagline": "Beat the odds. Climb the ladder.", "description": "Start at 1 in 10. Guess the number and 1 in 20 unlocks. Keep going and the ladder runs all the way to 1 in 10,000 — then to Custom odds, where you pick your own impossible number. Most attempts fail. That's the game.", "features": ["Eleven tiers from 1 in 10 to Custom odds", "Global leaderboards via Play Games", "Attempts refill over time, even while closed", "Achievements and friend comparisons"] };
 const pixelwrangler$1 = { "tagline": "Tap fast. Climb the mountain.", "description": "The feed is broken and wild pixels are pouring out of the glitch. Tap them out of the air before they escape, dodge what's hiding in the storm, and climb one 50-wave mountain that keeps getting wilder. Every run is a build — and a run that ends badly still pays out.", "features": ["A 50-wave run with a checkpoint every ten", "One of three upgrade cards drafted after every wave", "Shards from every run, spent on a 16-perk tree", "Five themed acts, from the lab to the glitch dimension"] };
 const oretoorbit$1 = { "tagline": "Mine a flat world. Build a rocket out of shapes. Leave.", "description": "You're stuck in a flat, two-dimensional world, and the way out is a craft you fabricate from raw geometry. Mine the ground for dots, spend them at the bench — a square is hull, a triangle is a nozzle, a line is plumbing — then fly the thing you built out of the atmosphere. Nothing in it is a sprite: every object is a primitive, and the sky, the light and the glow on all of them come from one number, how much air is left above you.", "features": ["A Box2D physics sandbox, from the first dig to the burn", "Assemble a craft cell by cell, then find out what you got wrong", "Round worlds — walk far enough and you come back to your own shaft", "One continuous ascent: bright day at the surface, glowing lines in the void"], "teaser": { "rule": "Shape is form. Colour is function.", "note": "The whole game is four objects — point, line, triangle, square — and what a part does comes from what it is made of, so a red triangle is a nozzle and a blue square is a battery. New mechanics arrive as new materials rather than as new art. In development; no release date yet.", "alt": "A stick figure on a curving horizon, ore glowing under the ground, and a rocket built from squares and triangles climbing into a starfield.", "vocabulary": [{ "shape": "Point", "role": "raw ore" }, { "shape": "Line", "role": "strut, fuel line, wire" }, { "shape": "Triangle", "role": "fin, nozzle, capacitor" }, { "shape": "Square", "role": "hull, tank, battery" }] } };
 const footer$1 = { "blurb": "Independent developer building small, focused apps and games for Android.", "projects": "Projects", "elsewhere": "Elsewhere", "privacyNote": "Privacy policies are linked from each project page." };
 const notFound$1 = { "message": "That page doesn't exist — it may have been renamed or moved.", "back": "Back home" };
+const homepool$1 = { "tagline": "Track your pool. Never guess when it's due.", "description": "homepool is a self-hosted pool and spa maintenance tracker: log water measurements and treatments, get sanitizer-aware target ranges and dosing advice, and see it all from a clean dashboard — your data never leaves your own server. A first-class Home Assistant integration brings your readings and maintenance schedule into your existing smart home, with actionable push notifications when something's due.", "features": ["Water status board with ideal ranges and dosing advice per parameter", "Configurable maintenance schedule — backwash, filter checks, and anything else you track", "Home Assistant integration with a purpose-built Lovelace card", "Actionable push notifications that mark a task done right from the alert", "Self-hosted with one Docker command — your data stays on your own server"] };
 const enTranslations = {
   nav: nav$1,
   home: home$1,
@@ -9160,18 +9161,20 @@ const enTranslations = {
   pixelwrangler: pixelwrangler$1,
   oretoorbit: oretoorbit$1,
   footer: footer$1,
-  notFound: notFound$1
+  notFound: notFound$1,
+  homepool: homepool$1
 };
 const nav = { "home": "Accueil", "github": "GitHub", "toggleTheme": "Changer de thème", "toggleLanguage": "Changer de langue", "toggleMenu": "Ouvrir le menu" };
 const home = { "role": "Développeur indépendant", "greeting": "Bonjour, je suis", "statement": "Je conçois de petites applications et de petits jeux Android — ceux qui font une seule chose, bien, sans vous encombrer. Tout ici est conçu, programmé et publié en solo.", "seeProjects": "Voir les projets", "projects": "Projets", "shipped": "en chantier" };
-const status = { "live": "Sur Google Play", "soon": "Bientôt disponible", "dev": "En développement" };
-const project = { "about": "À propos", "features": "Points saillants", "details": "Détails", "platform": "Plateforme", "engine": "Conçu avec", "status": "État", "back": "Tous les projets", "privacyPolicy": "Politique de confidentialité", "getItOnGooglePlay": "Disponible sur Google Play", "joinClosedTesting": "Pas encore public — touchez pour rejoindre les essais fermés sur Google Play" };
+const status = { "live": "Sur Google Play", "available": "Auto-hébergé", "soon": "Bientôt disponible", "dev": "En développement" };
+const project = { "about": "À propos", "features": "Points saillants", "details": "Détails", "platform": "Plateforme", "engine": "Conçu avec", "status": "État", "back": "Tous les projets", "privacyPolicy": "Politique de confidentialité", "getItOnGooglePlay": "Disponible sur Google Play", "joinClosedTesting": "Pas encore public — touchez pour rejoindre les essais fermés sur Google Play", "viewOnGithub": "Voir sur GitHub" };
 const listkeeper = { "tagline": "Des listes simples, bien faites.", "description": "La plupart des applications de listes grossissent jusqu'à exiger un tutoriel. ListKeeper fait l'inverse : un endroit rapide et épuré pour vos listes, sans fonctions superflues que vous n'ouvrirez jamais. Créez une liste, cochez, passez à autre chose.", "features": ["Interface claire et dépouillée", "Rapide et léger", "Fonctionne entièrement hors ligne", "Version Premium optionnelle"] };
 const whataretheodds = { "tagline": "Défiez les probabilités. Grimpez l'échelle.", "description": "Commencez à 1 sur 10. Devinez le nombre et le palier 1 sur 20 se débloque. Continuez et l'échelle monte jusqu'à 1 sur 10 000 — puis jusqu'aux cotes personnalisées, où vous choisissez votre propre nombre impossible. La plupart des tentatives échouent. C'est le principe du jeu.", "features": ["Onze paliers, de 1 sur 10 aux cotes personnalisées", "Classements mondiaux via Play Games", "Les tentatives se rechargent avec le temps, même hors ligne", "Succès et comparaisons entre amis"] };
 const pixelwrangler = { "tagline": "Tapez vite. Gravissez la montagne.", "description": "Le flux est brisé et des pixels sauvages jaillissent de la faille. Attrapez-les d'une tape avant qu'ils ne s'échappent, esquivez ce qui se cache dans la tempête et gravissez une montagne de 50 vagues de plus en plus déchaînée. Chaque partie est une construction — et même celles qui tournent mal rapportent.", "features": ["Une ascension de 50 vagues, avec un point de contrôle aux dix", "Une carte d'amélioration sur trois repêchée après chaque vague", "Des éclats à chaque partie, dépensés dans un arbre de 16 avantages", "Cinq actes thématiques, du laboratoire à la dimension glitch"] };
 const oretoorbit = { "tagline": "Minez un monde plat. Bâtissez une fusée en formes. Partez.", "description": "Vous êtes coincé dans un monde plat, en deux dimensions, et la sortie est un engin que vous fabriquez à partir de géométrie brute. Minez le sol pour des points, dépensez-les à l'établi — un carré fait la coque, un triangle la tuyère, une ligne la plomberie — puis pilotez votre engin hors de l'atmosphère. Rien ici n'est un sprite : chaque objet est une primitive, et le ciel, la lumière et la lueur qui s'y posent découlent tous d'un seul nombre, la quantité d'air qu'il vous reste au-dessus de la tête.", "features": ["Un bac à sable physique sur Box2D, du premier coup de foreuse à la mise à feu", "Assemblez un engin case par case, puis découvrez ce que vous avez mal calculé", "Des mondes ronds — marchez assez loin et vous retombez sur votre propre puits", "Une seule ascension continue : plein jour au sol, lignes lumineuses dans le vide"], "teaser": { "rule": "La forme fait l'objet. La couleur fait la fonction.", "note": "Le jeu entier tient en quatre objets — point, ligne, triangle, carré — et le rôle d'une pièce vient de sa matière : un triangle rouge est une tuyère, un carré bleu une batterie. Les nouvelles mécaniques arrivent sous forme de matières, pas d'illustrations. En développement; aucune date de sortie.", "alt": "Un bonhomme allumette sur un horizon courbe, du minerai qui luit sous le sol et une fusée faite de carrés et de triangles qui grimpe vers les étoiles.", "vocabulary": [{ "shape": "Point", "role": "minerai brut" }, { "shape": "Ligne", "role": "entretoise, conduite, fil" }, { "shape": "Triangle", "role": "aileron, tuyère, condensateur" }, { "shape": "Carré", "role": "coque, réservoir, batterie" }] } };
 const footer = { "blurb": "Développeur indépendant créant de petites applications et de petits jeux pour Android.", "projects": "Projets", "elsewhere": "Ailleurs", "privacyNote": "Les politiques de confidentialité sont liées depuis chaque page de projet." };
 const notFound = { "message": "Cette page n'existe pas — elle a peut-être été renommée ou déplacée.", "back": "Retour à l'accueil" };
+const homepool = { "tagline": "Suivez votre piscine. Ne devinez plus quand agir.", "description": "homepool est un suivi de l'entretien de piscine et de spa auto-hébergé : enregistrez vos mesures d'eau et vos traitements, obtenez des plages cibles adaptées à votre désinfectant et des conseils de dosage, et voyez tout depuis un tableau de bord clair — vos données ne quittent jamais votre propre serveur. Une intégration Home Assistant de premier ordre apporte vos relevés et votre calendrier d'entretien dans votre maison intelligente, avec des notifications interactives quand quelque chose est dû.", "features": ["Tableau d'état de l'eau avec plages idéales et conseils de dosage par paramètre", "Calendrier d'entretien configurable — lavage à contre-courant, vérifications de filtre, et tout ce que vous suivez", "Intégration Home Assistant avec une carte Lovelace dédiée", "Notifications interactives qui marquent une tâche comme terminée directement depuis l'alerte", "Auto-hébergé avec une seule commande Docker — vos données restent sur votre propre serveur"] };
 const frCATranslations = {
   nav,
   home,
@@ -9182,7 +9185,8 @@ const frCATranslations = {
   pixelwrangler,
   oretoorbit,
   footer,
-  notFound
+  notFound,
+  homepool
 };
 const translations = {
   "en": enTranslations,
@@ -9363,11 +9367,22 @@ const createLucideIcon = (iconName, iconNode) => {
  * This source code is licensed under the ISC license.
  * See the LICENSE file in the root directory of this source tree.
  */
-const __iconNode$e = [
+const __iconNode$f = [
   ["path", { d: "m12 19-7-7 7-7", key: "1l729n" }],
   ["path", { d: "M19 12H5", key: "x3x0zl" }]
 ];
-const ArrowLeft = createLucideIcon("arrow-left", __iconNode$e);
+const ArrowLeft = createLucideIcon("arrow-left", __iconNode$f);
+/**
+ * @license lucide-react v0.535.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */
+const __iconNode$e = [
+  ["path", { d: "M5 12h14", key: "1ays0h" }],
+  ["path", { d: "m12 5 7 7-7 7", key: "xquz4c" }]
+];
+const ArrowRight = createLucideIcon("arrow-right", __iconNode$e);
 /**
  * @license lucide-react v0.535.0 - ISC
  *
@@ -9375,17 +9390,6 @@ const ArrowLeft = createLucideIcon("arrow-left", __iconNode$e);
  * See the LICENSE file in the root directory of this source tree.
  */
 const __iconNode$d = [
-  ["path", { d: "M5 12h14", key: "1ays0h" }],
-  ["path", { d: "m12 5 7 7-7 7", key: "xquz4c" }]
-];
-const ArrowRight = createLucideIcon("arrow-right", __iconNode$d);
-/**
- * @license lucide-react v0.535.0 - ISC
- *
- * This source code is licensed under the ISC license.
- * See the LICENSE file in the root directory of this source tree.
- */
-const __iconNode$c = [
   [
     "path",
     {
@@ -9417,22 +9421,22 @@ const __iconNode$c = [
   ["path", { d: "m12 8 4.74-2.85", key: "3rx089" }],
   ["path", { d: "M12 13.5V8", key: "1io7kd" }]
 ];
-const Boxes = createLucideIcon("boxes", __iconNode$c);
+const Boxes = createLucideIcon("boxes", __iconNode$d);
 /**
  * @license lucide-react v0.535.0 - ISC
  *
  * This source code is licensed under the ISC license.
  * See the LICENSE file in the root directory of this source tree.
  */
-const __iconNode$b = [["path", { d: "M20 6 9 17l-5-5", key: "1gmf2c" }]];
-const Check = createLucideIcon("check", __iconNode$b);
+const __iconNode$c = [["path", { d: "M20 6 9 17l-5-5", key: "1gmf2c" }]];
+const Check = createLucideIcon("check", __iconNode$c);
 /**
  * @license lucide-react v0.535.0 - ISC
  *
  * This source code is licensed under the ISC license.
  * See the LICENSE file in the root directory of this source tree.
  */
-const __iconNode$a = [
+const __iconNode$b = [
   ["path", { d: "M10 2v2", key: "7u0qdc" }],
   ["path", { d: "M14 2v2", key: "6buw04" }],
   [
@@ -9444,14 +9448,14 @@ const __iconNode$a = [
   ],
   ["path", { d: "M6 2v2", key: "colzsn" }]
 ];
-const Coffee = createLucideIcon("coffee", __iconNode$a);
+const Coffee = createLucideIcon("coffee", __iconNode$b);
 /**
  * @license lucide-react v0.535.0 - ISC
  *
  * This source code is licensed under the ISC license.
  * See the LICENSE file in the root directory of this source tree.
  */
-const __iconNode$9 = [
+const __iconNode$a = [
   ["rect", { width: "12", height: "12", x: "2", y: "10", rx: "2", ry: "2", key: "6agr2n" }],
   [
     "path",
@@ -9462,14 +9466,14 @@ const __iconNode$9 = [
   ["path", { d: "M15 6h.01", key: "cblpky" }],
   ["path", { d: "M18 9h.01", key: "2061c0" }]
 ];
-const Dices = createLucideIcon("dices", __iconNode$9);
+const Dices = createLucideIcon("dices", __iconNode$a);
 /**
  * @license lucide-react v0.535.0 - ISC
  *
  * This source code is licensed under the ISC license.
  * See the LICENSE file in the root directory of this source tree.
  */
-const __iconNode$8 = [
+const __iconNode$9 = [
   [
     "path",
     {
@@ -9479,7 +9483,19 @@ const __iconNode$8 = [
   ],
   ["path", { d: "M9 18c-4.51 2-5-2-7-2", key: "9comsn" }]
 ];
-const Github = createLucideIcon("github", __iconNode$8);
+const Github = createLucideIcon("github", __iconNode$9);
+/**
+ * @license lucide-react v0.535.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */
+const __iconNode$8 = [
+  ["circle", { cx: "12", cy: "12", r: "10", key: "1mglay" }],
+  ["path", { d: "M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20", key: "13o1zl" }],
+  ["path", { d: "M2 12h20", key: "9i4pu4" }]
+];
+const Globe = createLucideIcon("globe", __iconNode$8);
 /**
  * @license lucide-react v0.535.0 - ISC
  *
@@ -9487,11 +9503,13 @@ const Github = createLucideIcon("github", __iconNode$8);
  * See the LICENSE file in the root directory of this source tree.
  */
 const __iconNode$7 = [
-  ["circle", { cx: "12", cy: "12", r: "10", key: "1mglay" }],
-  ["path", { d: "M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20", key: "13o1zl" }],
-  ["path", { d: "M2 12h20", key: "9i4pu4" }]
+  ["path", { d: "m3 17 2 2 4-4", key: "1jhpwq" }],
+  ["path", { d: "m3 7 2 2 4-4", key: "1obspn" }],
+  ["path", { d: "M13 6h8", key: "15sg57" }],
+  ["path", { d: "M13 12h8", key: "h98zly" }],
+  ["path", { d: "M13 18h8", key: "oe0vm4" }]
 ];
-const Globe = createLucideIcon("globe", __iconNode$7);
+const ListChecks = createLucideIcon("list-checks", __iconNode$7);
 /**
  * @license lucide-react v0.535.0 - ISC
  *
@@ -9499,13 +9517,11 @@ const Globe = createLucideIcon("globe", __iconNode$7);
  * See the LICENSE file in the root directory of this source tree.
  */
 const __iconNode$6 = [
-  ["path", { d: "m3 17 2 2 4-4", key: "1jhpwq" }],
-  ["path", { d: "m3 7 2 2 4-4", key: "1obspn" }],
-  ["path", { d: "M13 6h8", key: "15sg57" }],
-  ["path", { d: "M13 12h8", key: "h98zly" }],
-  ["path", { d: "M13 18h8", key: "oe0vm4" }]
+  ["path", { d: "M4 12h16", key: "1lakjw" }],
+  ["path", { d: "M4 18h16", key: "19g7jn" }],
+  ["path", { d: "M4 6h16", key: "1o0s65" }]
 ];
-const ListChecks = createLucideIcon("list-checks", __iconNode$6);
+const Menu = createLucideIcon("menu", __iconNode$6);
 /**
  * @license lucide-react v0.535.0 - ISC
  *
@@ -9513,18 +9529,6 @@ const ListChecks = createLucideIcon("list-checks", __iconNode$6);
  * See the LICENSE file in the root directory of this source tree.
  */
 const __iconNode$5 = [
-  ["path", { d: "M4 12h16", key: "1lakjw" }],
-  ["path", { d: "M4 18h16", key: "19g7jn" }],
-  ["path", { d: "M4 6h16", key: "1o0s65" }]
-];
-const Menu = createLucideIcon("menu", __iconNode$5);
-/**
- * @license lucide-react v0.535.0 - ISC
- *
- * This source code is licensed under the ISC license.
- * See the LICENSE file in the root directory of this source tree.
- */
-const __iconNode$4 = [
   [
     "path",
     {
@@ -9533,14 +9537,14 @@ const __iconNode$4 = [
     }
   ]
 ];
-const Moon = createLucideIcon("moon", __iconNode$4);
+const Moon = createLucideIcon("moon", __iconNode$5);
 /**
  * @license lucide-react v0.535.0 - ISC
  *
  * This source code is licensed under the ISC license.
  * See the LICENSE file in the root directory of this source tree.
  */
-const __iconNode$3 = [
+const __iconNode$4 = [
   [
     "path",
     {
@@ -9558,14 +9562,14 @@ const __iconNode$3 = [
   ["path", { d: "M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0", key: "1f8sc4" }],
   ["path", { d: "M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5", key: "qeys4" }]
 ];
-const Rocket = createLucideIcon("rocket", __iconNode$3);
+const Rocket = createLucideIcon("rocket", __iconNode$4);
 /**
  * @license lucide-react v0.535.0 - ISC
  *
  * This source code is licensed under the ISC license.
  * See the LICENSE file in the root directory of this source tree.
  */
-const __iconNode$2 = [
+const __iconNode$3 = [
   [
     "path",
     {
@@ -9574,14 +9578,14 @@ const __iconNode$2 = [
     }
   ]
 ];
-const Shield = createLucideIcon("shield", __iconNode$2);
+const Shield = createLucideIcon("shield", __iconNode$3);
 /**
  * @license lucide-react v0.535.0 - ISC
  *
  * This source code is licensed under the ISC license.
  * See the LICENSE file in the root directory of this source tree.
  */
-const __iconNode$1 = [
+const __iconNode$2 = [
   ["circle", { cx: "12", cy: "12", r: "4", key: "4exip2" }],
   ["path", { d: "M12 2v2", key: "tus03m" }],
   ["path", { d: "M12 20v2", key: "1lh1kg" }],
@@ -9592,7 +9596,37 @@ const __iconNode$1 = [
   ["path", { d: "m6.34 17.66-1.41 1.41", key: "1m8zz5" }],
   ["path", { d: "m19.07 4.93-1.41 1.41", key: "1shlcs" }]
 ];
-const Sun = createLucideIcon("sun", __iconNode$1);
+const Sun = createLucideIcon("sun", __iconNode$2);
+/**
+ * @license lucide-react v0.535.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */
+const __iconNode$1 = [
+  [
+    "path",
+    {
+      d: "M2 6c.6.5 1.2 1 2.5 1C7 7 7 5 9.5 5c2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1",
+      key: "knzxuh"
+    }
+  ],
+  [
+    "path",
+    {
+      d: "M2 12c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1",
+      key: "2jd2cc"
+    }
+  ],
+  [
+    "path",
+    {
+      d: "M2 18c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1",
+      key: "rd2r6e"
+    }
+  ]
+];
+const Waves = createLucideIcon("waves", __iconNode$1);
 /**
  * @license lucide-react v0.535.0 - ISC
  *
@@ -9807,6 +9841,25 @@ const projects = [
     playUrl: null,
     privacyUrl: null,
     teaser: OreToOrbitTeaser
+  },
+  {
+    id: "homepool",
+    slug: "homepool",
+    title: "homepool",
+    icon: Waves,
+    status: "available",
+    accentVar: "--accent-homepool",
+    platform: "Self-hosted (Docker)",
+    engine: "FastAPI + React",
+    playUrl: null,
+    githubUrl: "https://github.com/alecc08/homepool",
+    privacyUrl: null,
+    logoSrc: "/logos/homepool.png",
+    screenshots: [
+      "/screenshots/homepool/1-dashboard.png",
+      "/screenshots/homepool/2-maintenance.png",
+      "/screenshots/homepool/3-mobile.png"
+    ]
   }
 ];
 const projectBySlug = (slug) => projects.find((p) => p.slug === slug);
@@ -10101,6 +10154,20 @@ const ProjectPage = () => {
           ),
           !isLive && /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "play-badge-caption", children: t("project.joinClosedTesting") })
         ] }),
+        project2.githubUrl && /* @__PURE__ */ jsxRuntimeExports.jsx("section", { className: "project-section", children: /* @__PURE__ */ jsxRuntimeExports.jsxs(
+          "a",
+          {
+            href: project2.githubUrl,
+            target: "_blank",
+            rel: "noopener noreferrer",
+            className: "btn btn-primary",
+            children: [
+              /* @__PURE__ */ jsxRuntimeExports.jsx(Github, { size: 17 }),
+              " ",
+              t("project.viewOnGithub")
+            ]
+          }
+        ) }),
         /* @__PURE__ */ jsxRuntimeExports.jsxs("section", { className: "project-section", children: [
           /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { children: t("project.about") }),
           /* @__PURE__ */ jsxRuntimeExports.jsx("p", { children: t(`${project2.id}.description`) })

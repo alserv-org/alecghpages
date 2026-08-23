@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
-import { ArrowLeft, Check, Shield } from 'lucide-react';
+import { ArrowLeft, Check, Github, Shield } from 'lucide-react';
 import { useTranslation } from '../contexts/LanguageContext';
 import { projectBySlug } from '../data/projects';
 import StatusPill from '../components/StatusPill';
@@ -83,6 +83,19 @@ const ProjectPage = () => {
             />
           </a>
           {!isLive && <p className="play-badge-caption">{t('project.joinClosedTesting')}</p>}
+        </section>
+      )}
+
+      {project.githubUrl && (
+        <section className="project-section">
+          <a
+            href={project.githubUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn btn-primary"
+          >
+            <Github size={17} /> {t('project.viewOnGithub')}
+          </a>
         </section>
       )}
 
