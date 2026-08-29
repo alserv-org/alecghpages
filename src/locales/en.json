@@ -54,13 +54,15 @@
     ]
   },
   "pixelwrangler": {
-    "tagline": "Tap fast. Climb the mountain.",
-    "description": "The feed is broken and wild pixels are pouring out of the glitch. Tap them out of the air before they escape, dodge what's hiding in the storm, and climb one 50-wave mountain that keeps getting wilder. Every run is a build — and a run that ends badly still pays out.",
+    "tagline": "Tap fast. Draft a build. Climb the storm.",
+    "description": "The feed is broken and wild pixels are pouring out of the glitch. Tap them out of the air before they escape, dodge what's hiding in the storm, and climb one 50-wave mountain past ten bosses. After every wave you draft one of three cards — stack three of a signal and a Resonance changes the rules rather than the numbers. Take the corrupted card for more power and a permanent fault, or play it clean. A run that ends badly still pays out.",
     "features": [
-      "A 50-wave run with a checkpoint every ten",
+      "A 50-wave climb with a checkpoint every ten",
       "One of three upgrade cards drafted after every wave",
-      "Shards from every run, spent on a 16-perk tree",
-      "Five themed acts, from the lab to the glitch dimension"
+      "Ten bosses, each with a single opening to find",
+      "Corrupted cards: more power, a permanent cost",
+      "Shards from every run, spent on a perk tree",
+      "Plays offline — no account, no timers"
     ]
   },
   "oretoorbit": {
@@ -77,10 +79,22 @@
       "note": "The whole game is four objects — point, line, triangle, square — and what a part does comes from what it is made of, so a red triangle is a nozzle and a blue square is a battery. New mechanics arrive as new materials rather than as new art. In development; no release date yet.",
       "alt": "A stick figure on a curving horizon, ore glowing under the ground, and a rocket built from squares and triangles climbing into a starfield.",
       "vocabulary": [
-        { "shape": "Point", "role": "raw ore" },
-        { "shape": "Line", "role": "strut, fuel line, wire" },
-        { "shape": "Triangle", "role": "fin, nozzle, capacitor" },
-        { "shape": "Square", "role": "hull, tank, battery" }
+        {
+          "shape": "Point",
+          "role": "raw ore"
+        },
+        {
+          "shape": "Line",
+          "role": "strut, fuel line, wire"
+        },
+        {
+          "shape": "Triangle",
+          "role": "fin, nozzle, capacitor"
+        },
+        {
+          "shape": "Square",
+          "role": "hull, tank, battery"
+        }
       ]
     }
   },

@@ -54,13 +54,15 @@
     ]
   },
   "pixelwrangler": {
-    "tagline": "Tapez vite. Gravissez la montagne.",
-    "description": "Le flux est brisé et des pixels sauvages jaillissent de la faille. Attrapez-les d'une tape avant qu'ils ne s'échappent, esquivez ce qui se cache dans la tempête et gravissez une montagne de 50 vagues de plus en plus déchaînée. Chaque partie est une construction — et même celles qui tournent mal rapportent.",
+    "tagline": "Tapez vite. Bâtissez. Gravissez la tempête.",
+    "description": "Le flux est brisé et des pixels sauvages en jaillissent. Attrapez-les au vol avant qu'ils ne s'échappent, esquivez ce qui se cache dans la tempête, et gravissez une montagne de 50 vagues jalonnée de dix boss. Après chaque vague, vous repêchez une carte sur trois — accumulez trois fois le même signal et une Résonance change les règles, pas les chiffres. Prenez la carte corrompue pour plus de puissance et un défaut permanent, ou jouez proprement. Même une partie qui tourne mal rapporte.",
     "features": [
-      "Une ascension de 50 vagues, avec un point de contrôle aux dix",
+      "Une ascension de 50 vagues, avec un point de contrôle tous les dix paliers",
       "Une carte d'amélioration sur trois repêchée après chaque vague",
-      "Des éclats à chaque partie, dépensés dans un arbre de 16 avantages",
-      "Cinq actes thématiques, du laboratoire à la dimension glitch"
+      "Dix boss, chacun avec une seule ouverture à trouver",
+      "Cartes corrompues : plus de puissance, un coût permanent",
+      "Des éclats à chaque partie, investis dans un arbre d'avantages",
+      "Fonctionne hors ligne — sans compte, sans minuterie"
     ]
   },
   "oretoorbit": {
@@ -77,10 +79,22 @@
       "note": "Le jeu entier tient en quatre objets — point, ligne, triangle, carré — et le rôle d'une pièce vient de sa matière : un triangle rouge est une tuyère, un carré bleu une batterie. Les nouvelles mécaniques arrivent sous forme de matières, pas d'illustrations. En développement; aucune date de sortie.",
       "alt": "Un bonhomme allumette sur un horizon courbe, du minerai qui luit sous le sol et une fusée faite de carrés et de triangles qui grimpe vers les étoiles.",
       "vocabulary": [
-        { "shape": "Point", "role": "minerai brut" },
-        { "shape": "Ligne", "role": "entretoise, conduite, fil" },
-        { "shape": "Triangle", "role": "aileron, tuyère, condensateur" },
-        { "shape": "Carré", "role": "coque, réservoir, batterie" }
+        {
+          "shape": "Point",
+          "role": "minerai brut"
+        },
+        {
+          "shape": "Ligne",
+          "role": "entretoise, conduite, fil"
+        },
+        {
+          "shape": "Triangle",
+          "role": "aileron, tuyère, condensateur"
+        },
+        {
+          "shape": "Carré",
+          "role": "coque, réservoir, batterie"
+        }
       ]
     }
   },

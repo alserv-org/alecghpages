@@ -81,12 +81,17 @@ export const projects: Project[] = [
     playUrl: 'https://play.google.com/store/apps/details?id=org.alserv.pixelwrangler',
     privacyUrl: '/privacy-policy-pixelwrangler-en.html',
     logoSrc: '/logos/pixel-wrangler.png',
+    // Order is the pitch, and it matches the Play listing: the boss fight leads
+    // because it is the highest-contrast frame and answers "what is this" in one
+    // glance; the card draft is second because drafting is what makes this a
+    // roguelike rather than a tapper. The menu goes last — menus don't sell.
     screenshots: [
-      '/screenshots/pixel-wrangler/01-main-menu.webp',
-      '/screenshots/pixel-wrangler/02-the-storm.webp',
-      '/screenshots/pixel-wrangler/03-draft.webp',
-      '/screenshots/pixel-wrangler/04-run-over.webp',
-      '/screenshots/pixel-wrangler/05-upgrades.webp',
+      '/screenshots/pixel-wrangler/01-boss-fight.webp',
+      '/screenshots/pixel-wrangler/02-the-draft.webp',
+      '/screenshots/pixel-wrangler/03-the-storm.webp',
+      '/screenshots/pixel-wrangler/04-corrupted.webp',
+      '/screenshots/pixel-wrangler/05-run-over.webp',
+      '/screenshots/pixel-wrangler/06-main-menu.webp',
     ],
   },
   {

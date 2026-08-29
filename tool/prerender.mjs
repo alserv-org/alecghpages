@@ -37,7 +37,8 @@ const routes = [
     path: 'pixel-wrangler',
     title: 'Pixel Wrangler — tap fast, climb the mountain',
     description:
-      'An arcade roguelite: tap wild pixels out of a broken feed across a 50-wave mountain, drafting upgrade cards as you climb. Out now on Google Play.',
+      'An arcade roguelike: tap wild pixels out of a broken feed, draft a card after every wave, and climb a 50-wave storm past ten bosses. Out now on Google Play.',
+    image: '/og/pixel-wrangler.jpg',
   },
   {
     path: 'ore-to-orbit',
@@ -62,8 +63,14 @@ const routes = [
 
 const shell = await readFile(join(outDir, 'index.html'), 'utf8');
 
-/** Swaps the per-page metadata in a copy of the built shell. */
-const render = ({ path, title, description }) =>
+/**
+ * Swaps the per-page metadata in a copy of the built shell.
+ *
+ * `image` is optional and opt-in per route. A shared default would preview one
+ * product's art on every other product's page, so a route without its own image
+ * keeps the shell's plain summary card instead of borrowing someone else's.
+ */
+const render = ({ path, title, description, image }) =>
   shell
     .replace(/<title>[^<]*<\/title>/, `<title>${title}</title>`)
     .replace(
@@ -89,6 +96,15 @@ const render = ({ path, title, description }) =>
       // Trailing slash: Pages 301s /listkeeper to /listkeeper/, so the
       // canonical has to name the URL that actually answers 200.
       `$1${SITE}/${path}/$2`,
+    )
+    .replace(
+      /<meta\s+name="twitter:card"\s+content="summary"\s*\/>/,
+      image
+        ? `<meta property="og:image" content="${SITE}${image}" />\n` +
+          '    <meta property="og:image:width" content="1200" />\n' +
+          '    <meta property="og:image:height" content="630" />\n' +
+          '    <meta name="twitter:card" content="summary_large_image" />'
+        : '<meta name="twitter:card" content="summary" />',
     );
 
 for (const route of routes) {
