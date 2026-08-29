@@ -37,7 +37,8 @@ const routes = [
     path: 'pixel-wrangler',
     title: 'Pixel Wrangler — tap fast, climb the mountain',
     description:
-      'An arcade roguelite: wrangle cube-creatures out of a destabilised feed across a 50-wave mountain, drafting upgrade cards as you climb.',
+      'An arcade roguelike: tap to capture, draft a card after every wave, and climb a 50-wave storm past ten bosses. Plays offline, no account.',
+    image: '/pixel-wrangler/og.jpg',
   },
   // Pre-rename URL. The app redirects it to /pixel-wrangler client-side; this
   // file just stops it 404ing before the redirect can run.
@@ -50,8 +51,13 @@ const routes = [
 
 const shell = await readFile(join(outDir, 'index.html'), 'utf8');
 
-/** Swaps the per-page metadata in a copy of the built shell. */
-const render = ({ path, title, description }) =>
+/**
+ * Swaps the per-page metadata in a copy of the built shell.
+ *
+ * `image` is optional: a route without one keeps the shell's default card
+ * rather than emitting a link to an asset that does not exist.
+ */
+const render = ({ path, title, description, image }) =>
   shell
     .replace(/<title>[^<]*<\/title>/, `<title>${title}</title>`)
     .replace(
@@ -77,6 +83,17 @@ const render = ({ path, title, description }) =>
       // Trailing slash: Pages 301s /listkeeper to /listkeeper/, so the
       // canonical has to name the URL that actually answers 200.
       `$1${SITE}/${path}/$2`,
+    )
+    .replace(
+      // Product routes get a real preview card; everything else keeps the
+      // shell's plain summary rather than borrowing another product's art.
+      /<meta\s+name="twitter:card"\s+content="summary"\s*\/>/,
+      image
+        ? `<meta property="og:image" content="${SITE}${image}" />\n` +
+          '    <meta property="og:image:width" content="1200" />\n' +
+          '    <meta property="og:image:height" content="630" />\n' +
+          '    <meta name="twitter:card" content="summary_large_image" />'
+        : '<meta name="twitter:card" content="summary" />',
     );
 
 for (const route of routes) {

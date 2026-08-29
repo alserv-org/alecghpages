@@ -25,6 +25,12 @@
       property="og:description"
       content="This project is now called Pixel Wrangler."
     />
+    <!--
+      No og:image here on purpose: the home page has no single product art, and
+      a shared default would preview the wrong game. tool/prerender.mjs injects
+      an image (and upgrades the card to summary_large_image) only for routes
+      that declare one.
+    -->
     <meta name="twitter:card" content="summary" />
 
     <!--

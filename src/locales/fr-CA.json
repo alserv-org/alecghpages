@@ -28,7 +28,8 @@
     "status": "État",
     "back": "Tous les projets",
     "privacyPolicy": "Politique de confidentialité",
-    "getItOnGooglePlay": "Disponible sur Google Play"
+    "getItOnGooglePlay": "Disponible sur Google Play",
+    "screenshots": "Captures d'écran"
   },
   "listkeeper": {
     "tagline": "Des listes simples, bien faites.",
@@ -51,14 +52,23 @@
     ]
   },
   "pixelwrangler": {
-    "tagline": "Tapez vite. Gravissez la montagne.",
-    "description": "Un roguelite d'arcade où il faut extraire des créatures-cubes d'un flux déstabilisé avant qu'il ne vous submerge. Cinquante vagues, des cartes d'amélioration à repêcher au fil de l'ascension, et une économie d'éclats qui reporte votre progression d'une partie à l'autre.",
+    "tagline": "Tapez vite. Bâtissez. Gravissez la tempête.",
+    "description": "Un roguelike d'arcade où il faut capturer des pixels jaillis d'un flux déstabilisé avant qu'il ne vous submerge. Une ascension de 50 vagues, dix combats de boss aux attaques annoncées, et une carte repêchée après chaque vague — accumulez trois fois le même signal et une Résonance change les règles, pas les chiffres. Prenez la carte corrompue pour plus de puissance et un défaut permanent, ou jouez proprement. Chaque mort rapporte des éclats pour un arbre d'avantages qui rend la partie suivante visiblement plus forte. Fonctionne hors ligne, sans compte.",
     "features": [
-      "Une ascension de 50 vagues avec points de contrôle",
-      "Cartes d'amélioration repêchées entre les vagues",
-      "Économie d'éclats et arbre d'avantages persistant",
-      "Direction artistique cartoon en cel-shading"
-    ]
+      "Une ascension de 50 vagues, avec points de contrôle tous les 10 paliers",
+      "47 cartes à repêcher, 15 Résonances et 6 corruptions",
+      "10 boss nommés, chacun avec une seule ouverture à trouver",
+      "Un arbre de 17 avantages financé par chaque partie, gagnée ou perdue",
+      "Fonctionne hors ligne — sans compte, sans minuterie"
+    ],
+    "shots": {
+      "boss": "Une vague sur cinq est un boss avec une seule brèche dans son blindage.",
+      "draft": "Repêchez une carte sur trois après chaque vague.",
+      "storm": "Tapez pour capturer avant que le flux ne vous submerge.",
+      "corrupted": "Les cartes corrompues frappent plus fort et vous coûtent quelque chose de permanent.",
+      "runover": "Chaque partie rapporte des éclats, même les plus courtes.",
+      "menu": "Le hub : votre bourse, votre meilleure vague, et un seul bouton."
+    }
   },
   "footer": {
     "blurb": "Développeur indépendant créant de petites applications et de petits jeux pour Android.",

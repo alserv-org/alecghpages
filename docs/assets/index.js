@@ -9143,10 +9143,10 @@ function useViewTransitionState(to, { relative } = {}) {
 const nav$1 = { "home": "Home", "github": "GitHub", "toggleTheme": "Toggle theme", "toggleLanguage": "Toggle language", "toggleMenu": "Toggle menu" };
 const home$1 = { "role": "Independent developer", "greeting": "Hi, I'm", "statement": "I build small, focused apps and games for Android — the kind that do one thing properly and stay out of your way. Everything here is designed, written and shipped solo.", "seeProjects": "See projects", "projects": "Projects", "shipped": "in the works" };
 const status$1 = { "live": "On Google Play", "soon": "Coming soon", "dev": "In development" };
-const project$1 = { "about": "About", "features": "Highlights", "details": "Details", "platform": "Platform", "engine": "Built with", "status": "Status", "back": "All projects", "privacyPolicy": "Privacy policy", "getItOnGooglePlay": "Get it on Google Play" };
+const project$1 = { "about": "About", "features": "Highlights", "details": "Details", "platform": "Platform", "engine": "Built with", "status": "Status", "back": "All projects", "privacyPolicy": "Privacy policy", "getItOnGooglePlay": "Get it on Google Play", "screenshots": "Screenshots" };
 const listkeeper$1 = { "tagline": "Simple lists, done right.", "description": "Most list apps grow until they need a tutorial. ListKeeper goes the other way: a fast, clean place to keep your lists, with nothing bolted on that you'll never open. Make a list, check things off, get on with your day.", "features": ["Clean, uncluttered interface", "Fast and lightweight", "Works entirely offline", "Optional Premium upgrade"] };
 const whataretheodds$1 = { "tagline": "Beat the odds. Climb the ladder.", "description": "Start at 1 in 10. Guess the number and 1 in 20 unlocks. Keep going and the ladder runs all the way to 1 in 10,000 — then to Custom odds, where you pick your own impossible number. Most attempts fail. That's the game.", "features": ["Eleven tiers from 1 in 10 to Custom odds", "Global leaderboards via Play Games", "Attempts refill over time, even while closed", "Achievements and friend comparisons"] };
-const pixelwrangler$1 = { "tagline": "Tap fast. Climb the mountain.", "description": "An arcade roguelite about wrangling cube-creatures out of a destabilised feed before it overwhelms you. Fifty waves, a deck of upgrade cards drafted as you climb, and a shard economy that carries progress between runs.", "features": ["A 50-wave run with checkpoints", "Upgrade cards drafted between waves", "Shard economy and a persistent perk tree", "Bold cel-shaded cartoon art"] };
+const pixelwrangler$1 = { "tagline": "Tap fast. Draft a build. Climb the storm.", "description": "An arcade roguelike about wrangling pixels out of a destabilised feed before it overwhelms you. One fifty-wave climb, ten telegraphed boss fights, and a card drafted after every wave — stack three of a signal and a Resonance changes the rules rather than the numbers. Take the corrupted card for more power and a permanent fault, or play it clean. Every death pays out shards for a perk tree that makes the next run visibly stronger. Plays offline, no account.", "features": ["One 50-wave climb, with checkpoints every 10 waves", "47 draft cards, 15 Resonances and 6 corruptions", "10 named bosses, each with a single opening to find", "A 17-perk tree funded by every run, win or lose", "Plays offline — no account, no timers"], "shots": { "boss": "Every fifth wave is a boss with one gap in its armour.", "draft": "Draft one of three cards after every wave.", "storm": "Tap to capture before the feed overwhelms you.", "corrupted": "Corrupted cards hit harder and cost you something permanent.", "runover": "Every run pays out shards, even the short ones.", "menu": "The hub: your wallet, your best wave, and one button." } };
 const footer$1 = { "blurb": "Independent developer building small, focused apps and games for Android.", "projects": "Projects", "elsewhere": "Elsewhere", "privacyNote": "Privacy policies are linked from each project page." };
 const notFound$1 = { "message": "That page doesn't exist — it may have been renamed or moved.", "back": "Back home" };
 const enTranslations = {
@@ -9163,10 +9163,10 @@ const enTranslations = {
 const nav = { "home": "Accueil", "github": "GitHub", "toggleTheme": "Changer de thème", "toggleLanguage": "Changer de langue", "toggleMenu": "Ouvrir le menu" };
 const home = { "role": "Développeur indépendant", "greeting": "Bonjour, je suis", "statement": "Je conçois de petites applications et de petits jeux Android — ceux qui font une seule chose, bien, sans vous encombrer. Tout ici est conçu, programmé et publié en solo.", "seeProjects": "Voir les projets", "projects": "Projets", "shipped": "en chantier" };
 const status = { "live": "Sur Google Play", "soon": "Bientôt disponible", "dev": "En développement" };
-const project = { "about": "À propos", "features": "Points saillants", "details": "Détails", "platform": "Plateforme", "engine": "Conçu avec", "status": "État", "back": "Tous les projets", "privacyPolicy": "Politique de confidentialité", "getItOnGooglePlay": "Disponible sur Google Play" };
+const project = { "about": "À propos", "features": "Points saillants", "details": "Détails", "platform": "Plateforme", "engine": "Conçu avec", "status": "État", "back": "Tous les projets", "privacyPolicy": "Politique de confidentialité", "getItOnGooglePlay": "Disponible sur Google Play", "screenshots": "Captures d'écran" };
 const listkeeper = { "tagline": "Des listes simples, bien faites.", "description": "La plupart des applications de listes grossissent jusqu'à exiger un tutoriel. ListKeeper fait l'inverse : un endroit rapide et épuré pour vos listes, sans fonctions superflues que vous n'ouvrirez jamais. Créez une liste, cochez, passez à autre chose.", "features": ["Interface claire et dépouillée", "Rapide et léger", "Fonctionne entièrement hors ligne", "Version Premium optionnelle"] };
 const whataretheodds = { "tagline": "Défiez les probabilités. Grimpez l'échelle.", "description": "Commencez à 1 sur 10. Devinez le nombre et le palier 1 sur 20 se débloque. Continuez et l'échelle monte jusqu'à 1 sur 10 000 — puis jusqu'aux cotes personnalisées, où vous choisissez votre propre nombre impossible. La plupart des tentatives échouent. C'est le principe du jeu.", "features": ["Onze paliers, de 1 sur 10 aux cotes personnalisées", "Classements mondiaux via Play Games", "Les tentatives se rechargent avec le temps, même hors ligne", "Succès et comparaisons entre amis"] };
-const pixelwrangler = { "tagline": "Tapez vite. Gravissez la montagne.", "description": "Un roguelite d'arcade où il faut extraire des créatures-cubes d'un flux déstabilisé avant qu'il ne vous submerge. Cinquante vagues, des cartes d'amélioration à repêcher au fil de l'ascension, et une économie d'éclats qui reporte votre progression d'une partie à l'autre.", "features": ["Une ascension de 50 vagues avec points de contrôle", "Cartes d'amélioration repêchées entre les vagues", "Économie d'éclats et arbre d'avantages persistant", "Direction artistique cartoon en cel-shading"] };
+const pixelwrangler = { "tagline": "Tapez vite. Bâtissez. Gravissez la tempête.", "description": "Un roguelike d'arcade où il faut capturer des pixels jaillis d'un flux déstabilisé avant qu'il ne vous submerge. Une ascension de 50 vagues, dix combats de boss aux attaques annoncées, et une carte repêchée après chaque vague — accumulez trois fois le même signal et une Résonance change les règles, pas les chiffres. Prenez la carte corrompue pour plus de puissance et un défaut permanent, ou jouez proprement. Chaque mort rapporte des éclats pour un arbre d'avantages qui rend la partie suivante visiblement plus forte. Fonctionne hors ligne, sans compte.", "features": ["Une ascension de 50 vagues, avec points de contrôle tous les 10 paliers", "47 cartes à repêcher, 15 Résonances et 6 corruptions", "10 boss nommés, chacun avec une seule ouverture à trouver", "Un arbre de 17 avantages financé par chaque partie, gagnée ou perdue", "Fonctionne hors ligne — sans compte, sans minuterie"], "shots": { "boss": "Une vague sur cinq est un boss avec une seule brèche dans son blindage.", "draft": "Repêchez une carte sur trois après chaque vague.", "storm": "Tapez pour capturer avant que le flux ne vous submerge.", "corrupted": "Les cartes corrompues frappent plus fort et vous coûtent quelque chose de permanent.", "runover": "Chaque partie rapporte des éclats, même les plus courtes.", "menu": "Le hub : votre bourse, votre meilleure vague, et un seul bouton." } };
 const footer = { "blurb": "Développeur indépendant créant de petites applications et de petits jeux pour Android.", "projects": "Projets", "elsewhere": "Ailleurs", "privacyNote": "Les politiques de confidentialité sont liées depuis chaque page de projet." };
 const notFound = { "message": "Cette page n'existe pas — elle a peut-être été renommée ou déplacée.", "back": "Retour à l'accueil" };
 const frCATranslations = {
@@ -9610,7 +9610,16 @@ const projects = [
     platform: "Android",
     engine: "LibGDX",
     playUrl: null,
-    privacyUrl: "/privacy-policy-pixelwrangler-en.html"
+    privacyUrl: "/privacy-policy-pixelwrangler-en.html",
+    iconUrl: "/pixel-wrangler/icon.webp",
+    screenshots: [
+      { src: "/pixel-wrangler/01-boss-fight.webp", captionKey: "shots.boss" },
+      { src: "/pixel-wrangler/02-the-draft.webp", captionKey: "shots.draft" },
+      { src: "/pixel-wrangler/03-the-storm.webp", captionKey: "shots.storm" },
+      { src: "/pixel-wrangler/04-corrupted.webp", captionKey: "shots.corrupted" },
+      { src: "/pixel-wrangler/05-run-over.webp", captionKey: "shots.runover" },
+      { src: "/pixel-wrangler/07-main-menu.webp", captionKey: "shots.menu" }
+    ]
   }
 ];
 const projectBySlug = (slug) => projects.find((p) => p.slug === slug);
@@ -9853,7 +9862,7 @@ const ProjectPage = () => {
       style: { ["--accent"]: `var(${project2.accentVar})` },
       children: [
         /* @__PURE__ */ jsxRuntimeExports.jsxs("header", { className: "project-hero", children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "card-mark", children: /* @__PURE__ */ jsxRuntimeExports.jsx(Icon2, { size: 22, strokeWidth: 2 }) }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: project2.iconUrl ? "card-mark card-mark-img" : "card-mark", children: project2.iconUrl ? /* @__PURE__ */ jsxRuntimeExports.jsx("img", { src: project2.iconUrl, alt: "", width: 42, height: 42, loading: "eager" }) : /* @__PURE__ */ jsxRuntimeExports.jsx(Icon2, { size: 22, strokeWidth: 2 }) }),
           /* @__PURE__ */ jsxRuntimeExports.jsx("h1", { children: project2.title }),
           /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "project-tagline", children: t(`${project2.id}.tagline`) }),
           /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "project-hero-meta", children: [
@@ -9878,6 +9887,23 @@ const ProjectPage = () => {
             )
           }
         ) }),
+        project2.screenshots && project2.screenshots.length > 0 && /* @__PURE__ */ jsxRuntimeExports.jsxs("section", { className: "project-section", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { children: t("project.screenshots") }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("ul", { className: "shot-strip", children: project2.screenshots.map((shot) => /* @__PURE__ */ jsxRuntimeExports.jsxs("li", { children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsx(
+              "img",
+              {
+                src: shot.src,
+                alt: t(`${project2.id}.${shot.captionKey}`),
+                width: 1280,
+                height: 720,
+                loading: "lazy",
+                decoding: "async"
+              }
+            ),
+            /* @__PURE__ */ jsxRuntimeExports.jsx("span", { children: t(`${project2.id}.${shot.captionKey}`) })
+          ] }, shot.src)) })
+        ] }),
         /* @__PURE__ */ jsxRuntimeExports.jsxs("section", { className: "project-section", children: [
           /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { children: t("project.about") }),
           /* @__PURE__ */ jsxRuntimeExports.jsx("p", { children: t(`${project2.id}.description`) })

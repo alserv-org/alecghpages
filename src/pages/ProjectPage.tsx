@@ -31,8 +31,12 @@ const ProjectPage = () => {
       style={{ ['--accent' as string]: `var(${project.accentVar})` }}
     >
       <header className="project-hero">
-        <span className="card-mark">
-          <Icon size={22} strokeWidth={2} />
+        <span className={project.iconUrl ? 'card-mark card-mark-img' : 'card-mark'}>
+          {project.iconUrl ? (
+            <img src={project.iconUrl} alt="" width={42} height={42} loading="eager" />
+          ) : (
+            <Icon size={22} strokeWidth={2} />
+          )}
         </span>
         <h1>{project.title}</h1>
         <p className="project-tagline">{t(`${project.id}.tagline`)}</p>
@@ -56,6 +60,30 @@ const ProjectPage = () => {
               alt={t('project.getItOnGooglePlay')}
             />
           </a>
+        </section>
+      )}
+
+      {project.screenshots && project.screenshots.length > 0 && (
+        <section className="project-section">
+          <h2>{t('project.screenshots')}</h2>
+          {/* Horizontal scroller rather than a grid: these are 16:9 landscape
+              frames, and stacking them full-width on a phone buries everything
+              below the fold. */}
+          <ul className="shot-strip">
+            {project.screenshots.map((shot) => (
+              <li key={shot.src}>
+                <img
+                  src={shot.src}
+                  alt={t(`${project.id}.${shot.captionKey}`)}
+                  width={1280}
+                  height={720}
+                  loading="lazy"
+                  decoding="async"
+                />
+                <span>{t(`${project.id}.${shot.captionKey}`)}</span>
+              </li>
+            ))}
+          </ul>
         </section>
       )}
 

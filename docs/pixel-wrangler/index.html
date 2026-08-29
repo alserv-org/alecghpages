@@ -12,7 +12,7 @@
     <title>Pixel Wrangler — tap fast, climb the mountain</title>
     <meta
       name="description"
-      content="An arcade roguelite: wrangle cube-creatures out of a destabilised feed across a 50-wave mountain, drafting upgrade cards as you climb."
+      content="An arcade roguelike: tap to capture, draft a card after every wave, and climb a 50-wave storm past ten bosses. Plays offline, no account."
     />
     <link rel="canonical" href="https://www.alserv.org/pixel-wrangler/" />
     <meta name="theme-color" content="#08090d" media="(prefers-color-scheme: dark)" />
@@ -23,9 +23,18 @@
     <meta property="og:title" content="Pixel Wrangler — tap fast, climb the mountain" />
     <meta
       property="og:description"
-      content="An arcade roguelite: wrangle cube-creatures out of a destabilised feed across a 50-wave mountain, drafting upgrade cards as you climb."
+      content="An arcade roguelike: tap to capture, draft a card after every wave, and climb a 50-wave storm past ten bosses. Plays offline, no account."
     />
-    <meta name="twitter:card" content="summary" />
+    <!--
+      No og:image here on purpose: the home page has no single product art, and
+      a shared default would preview the wrong game. tool/prerender.mjs injects
+      an image (and upgrades the card to summary_large_image) only for routes
+      that declare one.
+    -->
+    <meta property="og:image" content="https://www.alserv.org/pixel-wrangler/og.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
 
     <!--
       Paint the stored theme before first render so a dark-mode visitor never

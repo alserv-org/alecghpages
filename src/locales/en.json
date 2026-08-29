@@ -28,7 +28,8 @@
     "status": "Status",
     "back": "All projects",
     "privacyPolicy": "Privacy policy",
-    "getItOnGooglePlay": "Get it on Google Play"
+    "getItOnGooglePlay": "Get it on Google Play",
+    "screenshots": "Screenshots"
   },
   "listkeeper": {
     "tagline": "Simple lists, done right.",
@@ -51,14 +52,23 @@
     ]
   },
   "pixelwrangler": {
-    "tagline": "Tap fast. Climb the mountain.",
-    "description": "An arcade roguelite about wrangling cube-creatures out of a destabilised feed before it overwhelms you. Fifty waves, a deck of upgrade cards drafted as you climb, and a shard economy that carries progress between runs.",
+    "tagline": "Tap fast. Draft a build. Climb the storm.",
+    "description": "An arcade roguelike about wrangling pixels out of a destabilised feed before it overwhelms you. One fifty-wave climb, ten telegraphed boss fights, and a card drafted after every wave — stack three of a signal and a Resonance changes the rules rather than the numbers. Take the corrupted card for more power and a permanent fault, or play it clean. Every death pays out shards for a perk tree that makes the next run visibly stronger. Plays offline, no account.",
     "features": [
-      "A 50-wave run with checkpoints",
-      "Upgrade cards drafted between waves",
-      "Shard economy and a persistent perk tree",
-      "Bold cel-shaded cartoon art"
-    ]
+      "One 50-wave climb, with checkpoints every 10 waves",
+      "47 draft cards, 15 Resonances and 6 corruptions",
+      "10 named bosses, each with a single opening to find",
+      "A 17-perk tree funded by every run, win or lose",
+      "Plays offline — no account, no timers"
+    ],
+    "shots": {
+      "boss": "Every fifth wave is a boss with one gap in its armour.",
+      "draft": "Draft one of three cards after every wave.",
+      "storm": "Tap to capture before the feed overwhelms you.",
+      "corrupted": "Corrupted cards hit harder and cost you something permanent.",
+      "runover": "Every run pays out shards, even the short ones.",
+      "menu": "The hub: your wallet, your best wave, and one button."
+    }
   },
   "footer": {
     "blurb": "Independent developer building small, focused apps and games for Android.",

@@ -247,7 +247,10 @@ a {
   width: 100%;
   max-width: var(--maxw);
   margin: 0 auto;
-  padding: 3rem 1.5rem 5rem;
+  /* Named so a full-bleed child (.shot-strip) can cancel it exactly rather
+     than hardcoding a matching number that silently drifts. */
+  --page-pad: 1.5rem;
+  padding: 3rem var(--page-pad) 5rem;
 }
 
 /* Ambient aurora behind everything. Fixed so it does not scroll away. */
@@ -748,7 +751,8 @@ p {
 
 @media (max-width: 720px) {
   .main-content {
-    padding: 2rem 1.15rem 3.5rem;
+    --page-pad: 1.15rem;
+    padding: 2rem var(--page-pad) 3.5rem;
   }
 
   .hero {
@@ -795,6 +799,62 @@ p {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
+}
+
+/* ---- Project screenshots ---------------------------------------------- */
+
+/*
+ * A horizontal scroller, not a grid. The shots are 16:9 landscape; stacked
+ * full-width on a phone the first one alone fills the viewport and everything
+ * below it — including the description — falls under the fold.
+ */
+.shot-strip {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  /* Bleed to the viewport edges so the strip reads as scrollable rather than
+     as a cut-off grid, then pad it back in to line up with the prose. */
+  margin-inline: calc(var(--page-pad) * -1);
+  padding-inline: var(--page-pad);
+  padding-bottom: 0.75rem;
+  scrollbar-width: thin;
+  list-style: none;
+}
+
+.shot-strip li {
+  flex: 0 0 min(520px, 82%);
+  scroll-snap-align: start;
+}
+
+.shot-strip img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  display: block;
+  border-radius: var(--radius);
+  border: 1px solid var(--line);
+  background: var(--surface);
+}
+
+.shot-strip span {
+  display: block;
+  margin-top: 0.55rem;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+/* The real app mark replaces the Lucide glyph, so drop the tinted plate. */
+.card-mark-img {
+  background: none;
+  overflow: hidden;
+}
+
+.card-mark-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 10px;
 }
 .navbar {
   position: sticky;
