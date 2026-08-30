@@ -9802,11 +9802,18 @@ const projects = [
     playUrl: "https://play.google.com/store/apps/details?id=org.alserv.whataretheodds",
     privacyUrl: "/privacy-policy-whataretheodds-en.html",
     logoSrc: "/logos/what-are-the-odds.png",
+    // Same order as the Play listing, which is the pitch: the reveal landing on a
+    // win first (it is what the game feels like), the keypad second (it is what you
+    // actually do), then the dive, the two outcomes, and the meta screens last.
     screenshots: [
-      "/screenshots/what-are-the-odds/1-menu.png",
-      "/screenshots/what-are-the-odds/2-gameplay.png",
-      "/screenshots/what-are-the-odds/3-result.png",
-      "/screenshots/what-are-the-odds/4-leaderboard.png"
+      "/screenshots/what-are-the-odds/01-the-reveal.webp",
+      "/screenshots/what-are-the-odds/02-your-guess.webp",
+      "/screenshots/what-are-the-odds/03-the-dive.webp",
+      "/screenshots/what-are-the-odds/04-you-won.webp",
+      "/screenshots/what-are-the-odds/05-so-close.webp",
+      "/screenshots/what-are-the-odds/06-the-ladder.webp",
+      "/screenshots/what-are-the-odds/07-leaderboard.webp",
+      "/screenshots/what-are-the-odds/08-your-stats.webp"
     ]
   },
   {
