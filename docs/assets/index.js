@@ -9804,7 +9804,21 @@ const projects = [
     engine: "Flutter",
     playUrl: "https://play.google.com/store/apps/details?id=org.alserv.listkeeper",
     privacyUrl: "/privacy-policy-listkeeper-en.html",
-    logoSrc: "/logos/listkeeper.png"
+    logoSrc: "/logos/listkeeper.png",
+    // Order is the pitch. The groceries list leads because it answers "what is
+    // this" in one glance and shows the add-item field mid-entry, which is where
+    // a list app lives. Freezer Food is second because the "Stored 10 months
+    // ago" chips are the one thing no other list app does. Themes come last:
+    // dark and light are the same screens, and themes don't sell.
+    screenshots: [
+      "/screenshots/listkeeper/01-the-list.webp",
+      "/screenshots/listkeeper/02-the-freezer.webp",
+      "/screenshots/listkeeper/03-the-drawer.webp",
+      "/screenshots/listkeeper/04-make-a-list.webp",
+      "/screenshots/listkeeper/05-todo-dark.webp",
+      "/screenshots/listkeeper/06-todo-light.webp",
+      "/screenshots/listkeeper/07-drawer-light.webp"
+    ]
   },
   {
     id: "whataretheodds",
