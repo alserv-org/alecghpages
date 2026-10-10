@@ -4,7 +4,10 @@
     "github": "GitHub",
     "toggleTheme": "Changer de thème",
     "toggleLanguage": "Changer de langue",
-    "toggleMenu": "Ouvrir le menu"
+    "languageTo": "Basculer vers English",
+    "languageCurrent": "Langue actuelle : français",
+    "toggleMenu": "Ouvrir le menu",
+    "skipToContent": "Aller au contenu"
   },
   "home": {
     "role": "Développeur indépendant",
@@ -12,7 +15,10 @@
     "statement": "Je conçois de petites applications et de petits jeux Android — ceux qui font une seule chose, bien, sans vous encombrer. Tout ici est conçu, programmé et publié en solo.",
     "seeProjects": "Voir les projets",
     "projects": "Projets",
-    "shipped": "en chantier"
+    "shipped": "en chantier",
+    "support": "Soutenir le travail",
+    "supportDesc": "Chaque application ici est développée en solo. Un café finance la suivante.",
+    "supportCta": "Ko-fi"
   },
   "status": {
     "live": "Sur Google Play",

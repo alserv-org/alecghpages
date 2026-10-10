@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Github } from 'lucide-react';
+import { ArrowRight, Github, Coffee, Heart } from 'lucide-react';
 import { useTranslation } from '../contexts/LanguageContext';
 import { projects } from '../data/projects';
-import { GITHUB_URL, OWNER } from '../data/site';
+import { GITHUB_URL, KOFI_URL, OWNER } from '../data/site';
 import StatusPill from '../components/StatusPill';
 
 const Home = () => {
@@ -74,6 +74,30 @@ const Home = () => {
               </Link>
             );
           })}
+
+          {/* Fills the odd slot left by an odd project count, and gives Ko-fi a
+              home on the page — the floating overlay widget it replaces sat on
+              top of the cards below it. */}
+          <a
+            href={KOFI_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="project-card support-card"
+          >
+            <div className="card-top">
+              <span className="card-mark">
+                <Heart size={22} strokeWidth={2} />
+              </span>
+              <span className="chip">{t('home.supportCta')}</span>
+            </div>
+            <h3>{t('home.support')}</h3>
+            <p className="card-desc">{t('home.supportDesc')}</p>
+            <div className="chip-row">
+              <span className="chip">
+                <Coffee size={12} aria-hidden="true" /> {t('home.supportCta')}
+              </span>
+            </div>
+          </a>
         </div>
       </section>
     </div>

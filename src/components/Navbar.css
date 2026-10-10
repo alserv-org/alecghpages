@@ -170,7 +170,11 @@
   }
 }
 
-@media (max-width: 860px) {
+/* Wordmark + seven links + three actions need ~980px of row; with the
+   wordmark dropped they still need ~852px. Below that the nav overflows the
+   viewport and gives the page a horizontal scrollbar, so the hamburger has to
+   arrive before the row stops fitting — 900px, not 860px. */
+@media (max-width: 900px) {
   .desktop-only {
     display: none;
   }
@@ -185,5 +189,24 @@
 
   .logo-word {
     display: none;
+  }
+}
+
+/* Wordmark + seven links + three actions need ~980px of row. Below that the
+   nav overflows the viewport and gives the page a horizontal scrollbar, so the
+   wordmark goes first and the link padding tightens after it — which buys the
+   room the hamburger breakpoint below then takes over from. */
+@media (max-width: 1024px) {
+  .logo-word {
+    display: none;
+  }
+
+  .nav-link {
+    padding: 0.5rem 0.6rem;
+  }
+
+  .nav-link.active::after {
+    left: 0.6rem;
+    right: 0.6rem;
   }
 }

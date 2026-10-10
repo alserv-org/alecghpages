@@ -63,13 +63,37 @@ const routes = [
 
 const shell = await readFile(join(outDir, 'index.html'), 'utf8');
 
+/* The per-route share card is swapped into a delimited region of the shell.
+   The delimiters are meta tags rather than HTML comments because Vite strips
+   comments out of index.html at build time. If index.html ever loses them the
+   swap silently no-ops and every route shares the home page's image, so fail
+   loudly instead. */
+const SHARE_BLOCK =
+  /<meta name="share-card" content="start" \/>[\s\S]*?<meta name="share-card" content="end" \/>/;
+if (!SHARE_BLOCK.test(shell)) {
+  console.error(
+    'Built index.html has no share-card start/end meta pair. Wrap the og:image + ' +
+      'twitter:card tags in index.html with <meta name="share-card" content="start|end" />.',
+  );
+  process.exit(1);
+}
+
 /**
  * Swaps the per-page metadata in a copy of the built shell.
  *
  * `image` is optional and opt-in per route. A shared default would preview one
  * product's art on every other product's page, so a route without its own image
- * keeps the shell's plain summary card instead of borrowing someone else's.
+ * drops the block entirely and falls back to a plain summary card.
  */
+const ogBlock = ({ image, title }) =>
+  image
+    ? `<meta property="og:image" content="${SITE}${image}" />\n` +
+      '    <meta property="og:image:width" content="1200" />\n' +
+      '    <meta property="og:image:height" content="630" />\n' +
+      `    <meta property="og:image:alt" content="${title}" />\n` +
+      '    <meta name="twitter:card" content="summary_large_image" />'
+    : '<meta name="twitter:card" content="summary" />';
+
 const render = ({ path, title, description, image }) =>
   shell
     .replace(/<title>[^<]*<\/title>/, `<title>${title}</title>`)
@@ -97,15 +121,7 @@ const render = ({ path, title, description, image }) =>
       // canonical has to name the URL that actually answers 200.
       `$1${SITE}/${path}/$2`,
     )
-    .replace(
-      /<meta\s+name="twitter:card"\s+content="summary"\s*\/>/,
-      image
-        ? `<meta property="og:image" content="${SITE}${image}" />\n` +
-          '    <meta property="og:image:width" content="1200" />\n' +
-          '    <meta property="og:image:height" content="630" />\n' +
-          '    <meta name="twitter:card" content="summary_large_image" />'
-        : '<meta name="twitter:card" content="summary" />',
-    );
+    .replace(SHARE_BLOCK, ogBlock({ image, title }));
 
 for (const route of routes) {
   const dir = join(outDir, route.path);
@@ -116,10 +132,17 @@ for (const route of routes) {
 
 /*
  * Unknown URLs still land on 404.html. Serve the app shell there so React
- * Router renders the styled NotFound page at the URL the visitor typed —
- * and GitHub still returns a correct 404 status for it.
+ * Router renders the styled NotFound page at the URL the visitor typed — and
+ * GitHub still returns a correct 404 status for it.
+ *
+ * The home page and the 404 shell keep the shell's own share card, so the
+ * sentinels around it are scaffolding only and get dropped on the way out.
  */
-await writeFile(join(outDir, '404.html'), shell);
+const stripSentinels = (html) =>
+  html.replace(/<meta name="share-card" content="(?:start|end)" \/>\s*/g, '');
+
+await writeFile(join(outDir, 'index.html'), stripSentinels(shell));
+await writeFile(join(outDir, '404.html'), stripSentinels(shell));
 console.log('prerendered 404.html');
 
 /*

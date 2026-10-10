@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
-import { LanguageProvider } from './contexts/LanguageContext';
+import { LanguageProvider, useTranslation } from './contexts/LanguageContext';
 import { ThemeProvider } from './contexts/ThemeContext';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
@@ -11,6 +11,16 @@ import NotFound from './pages/NotFound';
 import './styles/globals.css';
 import './components/Navbar.css';
 
+/** First tab stop: jumps past the nav to the page body. Hidden until focused. */
+const SkipLink = () => {
+  const { t } = useTranslation();
+  return (
+    <a href="#main" className="skip-link">
+      {t('nav.skipToContent')}
+    </a>
+  );
+};
+
 function App() {
   return (
     <ThemeProvider>
@@ -18,8 +28,9 @@ function App() {
         <Router>
           <div className="app-container">
             <div className="aurora" aria-hidden="true" />
+            <SkipLink />
             <Navbar />
-            <main className="main-content">
+            <main id="main" className="main-content" tabIndex={-1}>
               <ErrorBoundary>
                 <Routes>
                   <Route path="/" element={<Home />} />

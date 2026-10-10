@@ -31,6 +31,7 @@
   --accent-whataretheodds: #fbbf24;
   --accent-oretoorbit: #fb923c;
   --accent-homepool: #38bdf8;
+  --accent-support: #ff5e5b;
   --accent: var(--brand-1);
 
   /* Status pills */
@@ -75,6 +76,7 @@
   --accent-whataretheodds: #b45309;
   --accent-oretoorbit: #c2410c;
   --accent-homepool: #0369a1;
+  --accent-support: #c53030;
 
   --status-live: #059669;
   --status-soon: #b45309;
@@ -149,6 +151,31 @@ a {
 }
 
 /* ── Layout shell ──────────────────────────────────────────────────────── */
+
+/* Off-screen until focused, then pinned under the nav. */
+.skip-link {
+  position: fixed;
+  top: -100px;
+  left: 1rem;
+  z-index: 200;
+  padding: 0.6rem 1.1rem;
+  border-radius: 999px;
+  background: var(--bg-elevated);
+  border: 1px solid var(--line-strong);
+  color: var(--text);
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: top 0.18s var(--ease);
+}
+
+.skip-link:focus-visible {
+  top: 0.75rem;
+}
+
+/* The skip target: focusable programmatically, but no ring of its own. */
+.main-content:focus-visible {
+  outline: none;
+}
 
 .app-container {
   min-height: 100vh;
@@ -462,6 +489,9 @@ p {
 }
 
 .chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
   font-size: 0.76rem;
   font-weight: 500;
   padding: 0.22rem 0.6rem;
@@ -469,6 +499,25 @@ p {
   border: 1px solid var(--line);
   color: var(--text-muted);
   background: var(--bg-elevated);
+}
+
+/* Ko-fi tile closing the grid. Reads as a card, warms on hover. */
+.support-card {
+  --accent: var(--accent-support);
+}
+
+.support-card .card-mark svg {
+  fill: color-mix(in srgb, var(--accent) 22%, transparent);
+}
+
+.support-card .card-desc {
+  color: var(--text-muted);
+}
+
+.support-card .chip-row .chip {
+  color: var(--accent);
+  border-color: color-mix(in srgb, var(--accent) 35%, transparent);
+  background: color-mix(in srgb, var(--accent) 10%, transparent);
 }
 
 /* ── Status pill ───────────────────────────────────────────────────────── */

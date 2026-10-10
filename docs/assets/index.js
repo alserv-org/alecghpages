@@ -9140,8 +9140,8 @@ function useViewTransitionState(to, { relative } = {}) {
   let nextPath = stripBasename(vtContext.nextLocation.pathname, basename) || vtContext.nextLocation.pathname;
   return matchPath(path.pathname, nextPath) != null || matchPath(path.pathname, currentPath) != null;
 }
-const nav$1 = { "home": "Home", "github": "GitHub", "toggleTheme": "Toggle theme", "toggleLanguage": "Toggle language", "toggleMenu": "Toggle menu" };
-const home$1 = { "role": "Independent developer", "greeting": "Hi, I'm", "statement": "I build small, focused apps and games for Android — the kind that do one thing properly and stay out of your way. Everything here is designed, written and shipped solo.", "seeProjects": "See projects", "projects": "Projects", "shipped": "in the works" };
+const nav$1 = { "home": "Home", "github": "GitHub", "toggleTheme": "Toggle theme", "toggleLanguage": "Switch language", "languageTo": "Switch to Français", "languageCurrent": "Current language: English", "toggleMenu": "Toggle menu", "skipToContent": "Skip to content" };
+const home$1 = { "role": "Independent developer", "greeting": "Hi, I'm", "statement": "I build small, focused apps and games for Android — the kind that do one thing properly and stay out of your way. Everything here is designed, written and shipped solo.", "seeProjects": "See projects", "projects": "Projects", "shipped": "in the works", "support": "Support the work", "supportDesc": "Every app here is built solo. A coffee keeps the next one coming.", "supportCta": "Ko-fi" };
 const status$1 = { "live": "On Google Play", "available": "Self-hosted", "soon": "Coming soon", "dev": "In development" };
 const project$1 = { "about": "About", "features": "Highlights", "details": "Details", "platform": "Platform", "engine": "Built with", "status": "Status", "back": "All projects", "privacyPolicy": "Privacy policy", "getItOnGooglePlay": "Get it on Google Play", "joinClosedTesting": "Not public yet — tap to join closed testing on Google Play", "viewOnGithub": "View on GitHub" };
 const listkeeper$1 = { "tagline": "Simple lists, done right.", "description": "Most list apps grow until they need a tutorial. ListKeeper goes the other way: a fast, clean place to keep your lists, with nothing bolted on that you'll never open. Make a list, check things off, get on with your day.", "features": ["Clean, uncluttered interface", "Fast and lightweight", "Works entirely offline", "Optional Premium upgrade"] };
@@ -9164,8 +9164,8 @@ const enTranslations = {
   notFound: notFound$1,
   homepool: homepool$1
 };
-const nav = { "home": "Accueil", "github": "GitHub", "toggleTheme": "Changer de thème", "toggleLanguage": "Changer de langue", "toggleMenu": "Ouvrir le menu" };
-const home = { "role": "Développeur indépendant", "greeting": "Bonjour, je suis", "statement": "Je conçois de petites applications et de petits jeux Android — ceux qui font une seule chose, bien, sans vous encombrer. Tout ici est conçu, programmé et publié en solo.", "seeProjects": "Voir les projets", "projects": "Projets", "shipped": "en chantier" };
+const nav = { "home": "Accueil", "github": "GitHub", "toggleTheme": "Changer de thème", "toggleLanguage": "Changer de langue", "languageTo": "Basculer vers English", "languageCurrent": "Langue actuelle : français", "toggleMenu": "Ouvrir le menu", "skipToContent": "Aller au contenu" };
+const home = { "role": "Développeur indépendant", "greeting": "Bonjour, je suis", "statement": "Je conçois de petites applications et de petits jeux Android — ceux qui font une seule chose, bien, sans vous encombrer. Tout ici est conçu, programmé et publié en solo.", "seeProjects": "Voir les projets", "projects": "Projets", "shipped": "en chantier", "support": "Soutenir le travail", "supportDesc": "Chaque application ici est développée en solo. Un café finance la suivante.", "supportCta": "Ko-fi" };
 const status = { "live": "Sur Google Play", "available": "Auto-hébergé", "soon": "Bientôt disponible", "dev": "En développement" };
 const project = { "about": "À propos", "features": "Points saillants", "details": "Détails", "platform": "Plateforme", "engine": "Conçu avec", "status": "État", "back": "Tous les projets", "privacyPolicy": "Politique de confidentialité", "getItOnGooglePlay": "Disponible sur Google Play", "joinClosedTesting": "Pas encore public — touchez pour rejoindre les essais fermés sur Google Play", "viewOnGithub": "Voir sur GitHub" };
 const listkeeper = { "tagline": "Des listes simples, bien faites.", "description": "La plupart des applications de listes grossissent jusqu'à exiger un tutoriel. ListKeeper fait l'inverse : un endroit rapide et épuré pour vos listes, sans fonctions superflues que vous n'ouvrirez jamais. Créez une liste, cochez, passez à autre chose.", "features": ["Interface claire et dépouillée", "Rapide et léger", "Fonctionne entièrement hors ligne", "Version Premium optionnelle"] };
@@ -9367,11 +9367,22 @@ const createLucideIcon = (iconName, iconNode) => {
  * This source code is licensed under the ISC license.
  * See the LICENSE file in the root directory of this source tree.
  */
-const __iconNode$f = [
+const __iconNode$g = [
   ["path", { d: "m12 19-7-7 7-7", key: "1l729n" }],
   ["path", { d: "M19 12H5", key: "x3x0zl" }]
 ];
-const ArrowLeft = createLucideIcon("arrow-left", __iconNode$f);
+const ArrowLeft = createLucideIcon("arrow-left", __iconNode$g);
+/**
+ * @license lucide-react v0.535.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */
+const __iconNode$f = [
+  ["path", { d: "M5 12h14", key: "1ays0h" }],
+  ["path", { d: "m12 5 7 7-7 7", key: "xquz4c" }]
+];
+const ArrowRight = createLucideIcon("arrow-right", __iconNode$f);
 /**
  * @license lucide-react v0.535.0 - ISC
  *
@@ -9379,17 +9390,6 @@ const ArrowLeft = createLucideIcon("arrow-left", __iconNode$f);
  * See the LICENSE file in the root directory of this source tree.
  */
 const __iconNode$e = [
-  ["path", { d: "M5 12h14", key: "1ays0h" }],
-  ["path", { d: "m12 5 7 7-7 7", key: "xquz4c" }]
-];
-const ArrowRight = createLucideIcon("arrow-right", __iconNode$e);
-/**
- * @license lucide-react v0.535.0 - ISC
- *
- * This source code is licensed under the ISC license.
- * See the LICENSE file in the root directory of this source tree.
- */
-const __iconNode$d = [
   [
     "path",
     {
@@ -9421,22 +9421,22 @@ const __iconNode$d = [
   ["path", { d: "m12 8 4.74-2.85", key: "3rx089" }],
   ["path", { d: "M12 13.5V8", key: "1io7kd" }]
 ];
-const Boxes = createLucideIcon("boxes", __iconNode$d);
+const Boxes = createLucideIcon("boxes", __iconNode$e);
 /**
  * @license lucide-react v0.535.0 - ISC
  *
  * This source code is licensed under the ISC license.
  * See the LICENSE file in the root directory of this source tree.
  */
-const __iconNode$c = [["path", { d: "M20 6 9 17l-5-5", key: "1gmf2c" }]];
-const Check = createLucideIcon("check", __iconNode$c);
+const __iconNode$d = [["path", { d: "M20 6 9 17l-5-5", key: "1gmf2c" }]];
+const Check = createLucideIcon("check", __iconNode$d);
 /**
  * @license lucide-react v0.535.0 - ISC
  *
  * This source code is licensed under the ISC license.
  * See the LICENSE file in the root directory of this source tree.
  */
-const __iconNode$b = [
+const __iconNode$c = [
   ["path", { d: "M10 2v2", key: "7u0qdc" }],
   ["path", { d: "M14 2v2", key: "6buw04" }],
   [
@@ -9448,14 +9448,14 @@ const __iconNode$b = [
   ],
   ["path", { d: "M6 2v2", key: "colzsn" }]
 ];
-const Coffee = createLucideIcon("coffee", __iconNode$b);
+const Coffee = createLucideIcon("coffee", __iconNode$c);
 /**
  * @license lucide-react v0.535.0 - ISC
  *
  * This source code is licensed under the ISC license.
  * See the LICENSE file in the root directory of this source tree.
  */
-const __iconNode$a = [
+const __iconNode$b = [
   ["rect", { width: "12", height: "12", x: "2", y: "10", rx: "2", ry: "2", key: "6agr2n" }],
   [
     "path",
@@ -9466,14 +9466,14 @@ const __iconNode$a = [
   ["path", { d: "M15 6h.01", key: "cblpky" }],
   ["path", { d: "M18 9h.01", key: "2061c0" }]
 ];
-const Dices = createLucideIcon("dices", __iconNode$a);
+const Dices = createLucideIcon("dices", __iconNode$b);
 /**
  * @license lucide-react v0.535.0 - ISC
  *
  * This source code is licensed under the ISC license.
  * See the LICENSE file in the root directory of this source tree.
  */
-const __iconNode$9 = [
+const __iconNode$a = [
   [
     "path",
     {
@@ -9483,7 +9483,19 @@ const __iconNode$9 = [
   ],
   ["path", { d: "M9 18c-4.51 2-5-2-7-2", key: "9comsn" }]
 ];
-const Github = createLucideIcon("github", __iconNode$9);
+const Github = createLucideIcon("github", __iconNode$a);
+/**
+ * @license lucide-react v0.535.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */
+const __iconNode$9 = [
+  ["circle", { cx: "12", cy: "12", r: "10", key: "1mglay" }],
+  ["path", { d: "M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20", key: "13o1zl" }],
+  ["path", { d: "M2 12h20", key: "9i4pu4" }]
+];
+const Globe = createLucideIcon("globe", __iconNode$9);
 /**
  * @license lucide-react v0.535.0 - ISC
  *
@@ -9491,11 +9503,15 @@ const Github = createLucideIcon("github", __iconNode$9);
  * See the LICENSE file in the root directory of this source tree.
  */
 const __iconNode$8 = [
-  ["circle", { cx: "12", cy: "12", r: "10", key: "1mglay" }],
-  ["path", { d: "M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20", key: "13o1zl" }],
-  ["path", { d: "M2 12h20", key: "9i4pu4" }]
+  [
+    "path",
+    {
+      d: "M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5",
+      key: "mvr1a0"
+    }
+  ]
 ];
-const Globe = createLucideIcon("globe", __iconNode$8);
+const Heart = createLucideIcon("heart", __iconNode$8);
 /**
  * @license lucide-react v0.535.0 - ISC
  *
@@ -9919,11 +9935,11 @@ const Navbar = () => {
           {
             onClick: toggleLanguage,
             className: "icon-btn lang-btn",
-            "aria-label": t("nav.toggleLanguage"),
-            title: language === "en" ? "Français" : "English",
+            "aria-label": `${t("nav.toggleLanguage")} — ${t("nav.languageCurrent")}`,
+            title: t("nav.languageTo"),
             children: [
               /* @__PURE__ */ jsxRuntimeExports.jsx(Globe, { size: 18 }),
-              /* @__PURE__ */ jsxRuntimeExports.jsx("span", { children: language === "en" ? "FR" : "EN" })
+              /* @__PURE__ */ jsxRuntimeExports.jsx("span", { "aria-hidden": "true", children: language === "en" ? "EN" : "FR" })
             ]
           }
         ),
@@ -10079,30 +10095,54 @@ const Home = () => {
           t("home.shipped")
         ] })
       ] }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "project-grid", children: projects.map((project2) => {
-        const Icon2 = project2.icon;
-        return /* @__PURE__ */ jsxRuntimeExports.jsxs(
-          Link,
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "project-grid", children: [
+        projects.map((project2) => {
+          const Icon2 = project2.icon;
+          return /* @__PURE__ */ jsxRuntimeExports.jsxs(
+            Link,
+            {
+              to: `/${project2.slug}`,
+              className: "project-card",
+              style: { ["--accent"]: `var(${project2.accentVar})` },
+              children: [
+                /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "card-top", children: [
+                  /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "card-mark", children: project2.logoSrc ? /* @__PURE__ */ jsxRuntimeExports.jsx("img", { src: project2.logoSrc, alt: "", width: 22, height: 22 }) : /* @__PURE__ */ jsxRuntimeExports.jsx(Icon2, { size: 22, strokeWidth: 2 }) }),
+                  /* @__PURE__ */ jsxRuntimeExports.jsx(StatusPill, { status: project2.status })
+                ] }),
+                /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { children: project2.title }),
+                /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "card-desc", children: t(`${project2.id}.tagline`) }),
+                /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "chip-row", children: [
+                  /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "chip", children: project2.engine }),
+                  /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "chip", children: project2.platform })
+                ] })
+              ]
+            },
+            project2.id
+          );
+        }),
+        /* @__PURE__ */ jsxRuntimeExports.jsxs(
+          "a",
           {
-            to: `/${project2.slug}`,
-            className: "project-card",
-            style: { ["--accent"]: `var(${project2.accentVar})` },
+            href: KOFI_URL,
+            target: "_blank",
+            rel: "noopener noreferrer",
+            className: "project-card support-card",
             children: [
               /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "card-top", children: [
-                /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "card-mark", children: project2.logoSrc ? /* @__PURE__ */ jsxRuntimeExports.jsx("img", { src: project2.logoSrc, alt: "", width: 22, height: 22 }) : /* @__PURE__ */ jsxRuntimeExports.jsx(Icon2, { size: 22, strokeWidth: 2 }) }),
-                /* @__PURE__ */ jsxRuntimeExports.jsx(StatusPill, { status: project2.status })
+                /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "card-mark", children: /* @__PURE__ */ jsxRuntimeExports.jsx(Heart, { size: 22, strokeWidth: 2 }) }),
+                /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "chip", children: t("home.supportCta") })
               ] }),
-              /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { children: project2.title }),
-              /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "card-desc", children: t(`${project2.id}.tagline`) }),
-              /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "chip-row", children: [
-                /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "chip", children: project2.engine }),
-                /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "chip", children: project2.platform })
-              ] })
+              /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { children: t("home.support") }),
+              /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "card-desc", children: t("home.supportDesc") }),
+              /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "chip-row", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { className: "chip", children: [
+                /* @__PURE__ */ jsxRuntimeExports.jsx(Coffee, { size: 12, "aria-hidden": "true" }),
+                " ",
+                t("home.supportCta")
+              ] }) })
             ]
-          },
-          project2.id
-        );
-      }) })
+          }
+        )
+      ] })
     ] })
   ] });
 };
@@ -10233,11 +10273,16 @@ const ProjectPage = () => {
     }
   );
 };
+const SkipLink = () => {
+  const { t } = useTranslation();
+  return /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: "#main", className: "skip-link", children: t("nav.skipToContent") });
+};
 function App() {
   return /* @__PURE__ */ jsxRuntimeExports.jsx(ThemeProvider, { children: /* @__PURE__ */ jsxRuntimeExports.jsx(LanguageProvider, { children: /* @__PURE__ */ jsxRuntimeExports.jsx(BrowserRouter, { children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "app-container", children: [
     /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "aurora", "aria-hidden": "true" }),
+    /* @__PURE__ */ jsxRuntimeExports.jsx(SkipLink, {}),
     /* @__PURE__ */ jsxRuntimeExports.jsx(Navbar, {}),
-    /* @__PURE__ */ jsxRuntimeExports.jsx("main", { className: "main-content", children: /* @__PURE__ */ jsxRuntimeExports.jsx(ErrorBoundary, { children: /* @__PURE__ */ jsxRuntimeExports.jsxs(Routes, { children: [
+    /* @__PURE__ */ jsxRuntimeExports.jsx("main", { id: "main", className: "main-content", tabIndex: -1, children: /* @__PURE__ */ jsxRuntimeExports.jsx(ErrorBoundary, { children: /* @__PURE__ */ jsxRuntimeExports.jsxs(Routes, { children: [
       /* @__PURE__ */ jsxRuntimeExports.jsx(Route, { path: "/", element: /* @__PURE__ */ jsxRuntimeExports.jsx(Home, {}) }),
       /* @__PURE__ */ jsxRuntimeExports.jsx(Route, { path: "/pixelfarm", element: /* @__PURE__ */ jsxRuntimeExports.jsx(Navigate, { to: "/pixel-wrangler", replace: true }) }),
       /* @__PURE__ */ jsxRuntimeExports.jsx(Route, { path: "/:slug", element: /* @__PURE__ */ jsxRuntimeExports.jsx(ProjectPage, {}) }),

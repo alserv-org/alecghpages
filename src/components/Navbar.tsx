@@ -64,11 +64,11 @@ const Navbar = () => {
           <button
             onClick={toggleLanguage}
             className="icon-btn lang-btn"
-            aria-label={t('nav.toggleLanguage')}
-            title={language === 'en' ? 'Français' : 'English'}
+            aria-label={`${t('nav.toggleLanguage')} — ${t('nav.languageCurrent')}`}
+            title={t('nav.languageTo')}
           >
             <Globe size={18} />
-            <span>{language === 'en' ? 'FR' : 'EN'}</span>
+            <span aria-hidden="true">{language === 'en' ? 'EN' : 'FR'}</span>
           </button>
           <a
             href={GITHUB_URL}
