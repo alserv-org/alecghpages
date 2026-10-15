@@ -3,8 +3,11 @@
     "home": "Home",
     "github": "GitHub",
     "toggleTheme": "Toggle theme",
-    "toggleLanguage": "Toggle language",
-    "toggleMenu": "Toggle menu"
+    "toggleLanguage": "Switch language",
+    "languageTo": "Switch to Français",
+    "languageCurrent": "Current language: English",
+    "toggleMenu": "Toggle menu",
+    "skipToContent": "Skip to content"
   },
   "home": {
     "role": "Independent developer",
@@ -12,7 +15,10 @@
     "statement": "I build small, focused apps and games for Android — the kind that do one thing properly and stay out of your way. Everything here is designed, written and shipped solo.",
     "seeProjects": "See projects",
     "projects": "Projects",
-    "shipped": "in the works"
+    "shipped": "in the works",
+    "support": "Support the work",
+    "supportDesc": "Every app here is built solo. A coffee keeps the next one coming.",
+    "supportCta": "Ko-fi"
   },
   "status": {
     "live": "On Google Play",

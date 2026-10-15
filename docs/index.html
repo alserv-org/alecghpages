@@ -25,8 +25,11 @@
       property="og:description"
       content="Small, focused apps and games for Android: ListKeeper, What Are The Odds, Pixel Wrangler, and Ore to Orbit."
     />
-    <meta name="twitter:card" content="summary" />
-
+    <meta property="og:image" content="https://www.alserv.org/og/site.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Alec Chamberland — Independent Android developer" />
+    <meta name="twitter:card" content="summary_large_image" />
     <!--
       Paint the stored theme before first render so a dark-mode visitor never
       sees a white flash. Mirrors resolveInitialTheme() in ThemeContext.tsx —
@@ -55,14 +58,5 @@
   </head>
   <body>
     <div id="root"></div>
-    <script src='https://storage.ko-fi.com/cdn/scripts/overlay-widget.js'></script>
-    <script>
-      kofiWidgetOverlay.draw('alecc08', {
-        'type': 'floating-chat',
-        'floating-chat.donateButton.text': 'Support me',
-        'floating-chat.donateButton.background-color': '#7c5cff',
-        'floating-chat.donateButton.text-color': '#fff'
-      });
-    </script>
   </body>
 </html>
